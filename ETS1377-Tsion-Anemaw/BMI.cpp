@@ -1,4 +1,3 @@
-//1. Make a program that calculates the Body Mass Index (BMI) of a person and determine weather the person is in normal weight, under weight or over weight. BMI is calculated as (BMI = w/h*h). Make the program to work for multiple person before terminated.
 #include <iostream>
 using namespace std;
 int main() {
@@ -9,7 +8,7 @@ int main() {
     double BMI;
     cout<<"Enter your height(in meter): ";
     cin>>height;
-    cout<<"Enter your weight(in killogram): ";
+    cout<<"Enter your weight(in kilogram): ";
     cin>>weight;
     BMI=weight/(height*height);
     cout<<"BMI: "<<BMI<<endl;
@@ -20,15 +19,15 @@ int main() {
     else if (BMI>= 18.5 && BMI<=24.5){
         cout<<"Normal weight"<<endl;
     }
-    else{ 
+    else if (BMI>= 25 && BMI<=29.5){
         cout<<"Overweight"<<endl;
     }
-    cout<<"do you want to continue?y/n  ";
+    else{ 
+        cout<<"check your input"<<endl;
+    }
+    cout<<"do you want to continue?(choose y if you what to continue )  ";
     cin>>user;
     }
     while(user =='y');
-    
-    
-
-    return 0;
-}
+        return 0;
+    }
