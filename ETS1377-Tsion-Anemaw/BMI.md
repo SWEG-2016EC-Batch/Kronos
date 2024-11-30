@@ -11,7 +11,7 @@
       
 
  4. Output:
-    - Display the BMI value
+    - print the BMI value
     - Determine the BMI category:
       - Underweight: BMI < 18.5
       - Normal weight: 18.5 <= BMI < 24.9
