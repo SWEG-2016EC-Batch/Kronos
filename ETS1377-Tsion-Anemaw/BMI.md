@@ -1,15 +1,16 @@
  BMI Calculation Algorithm
 
-step 1. Input: 
-    - Weight 
-    - Height 
+1. Input: 
+ 
+        - Weight (in kilogram)
+        - Height (in meter)
 
-2. Process:
+3. Process:
     - Calculate BMI using the formula: 
-   BMI = Weight/(Height^2)
+       BMI = Weight/(Height^2)
       
 
-3. Output:
+ 4. Output:
     - Display the BMI value
     - Determine the BMI category:
       - Underweight: BMI < 18.5
