@@ -7,9 +7,9 @@ int main() {
    
     double height, weight;
     double BMI;
-    cout<<"Enter your height: ";
+    cout<<"Enter your height(in meter): ";
     cin>>height;
-    cout<<"Enter your weight: ";
+    cout<<"Enter your weight(in killogram): ";
     cin>>weight;
     BMI=weight/(height*height);
     cout<<"BMI: "<<BMI<<endl;
