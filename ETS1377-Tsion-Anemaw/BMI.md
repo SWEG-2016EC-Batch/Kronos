@@ -14,6 +14,6 @@
     - print the BMI value
     - Determine the BMI category:
       - Underweight: BMI < 18.5
-      - Normal weight: 18.5 <= BMI < 24.9
+      - Normal weight: 18.5 <= BMI <=24.9
       - Overweight: 25 <= BMI <=29.5
       
