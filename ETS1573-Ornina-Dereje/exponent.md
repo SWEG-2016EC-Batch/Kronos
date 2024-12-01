@@ -1,13 +1,10 @@
+Input: x and y
+opertation: x the power of y
+output: x^y
+
 Algorithm
-
-1.Input:
-
--Prompt the user to enter the base number. -Prompt the user to enter the exponent.
-
-2.Process:
-
--result = pow(base,exponent)
-
-3.Output:
-
--The result is {result}
+step1: start the program
+step2: read the input x and y
+step3:calculate x the power of y by pow(x,y)function
+step4: print or display x^y
+step5:Terminate the program
