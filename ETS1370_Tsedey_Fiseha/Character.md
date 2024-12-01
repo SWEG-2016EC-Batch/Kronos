@@ -1,29 +1,74 @@
-Input:File size in bytes,Transmission rate in bytes per second.
+<a name="readme-top"></a>
 
-Process:read input, display output,Calculate 
+<div align="center">
+  <h1><b> File transmission calculator </b></h1>
+  
+<html>
+<body>
+<div align = "left">
+<p> <h2> Problem analysis </h2> </p>
+
+<h4> Input: </h4>
+
+  <ul>
+   <li> File Size: </li>
+   </ul>
+
+<h4>Output:</h4>
+
+   <ul>
+    <li>Transmission Time:</li>
+    </ul>
+
+<h4>Operations:</h4>
+
+<ul>
+    <li>Read the file size in bytes from the user.</li>
+    <li>Calculate Total Characters:</li>
+   <pre> Formula: totalCharacters = fileSize / bytesPerCharacter </pre>
+   <li>Calculate Transmission Time:</li> 
+   <pre> Formula: transmissionTime = totalCharacters / transmissionRate </pre>
+         Convert Transmission Time to Hours, Minutes, and Seconds:
+    <li>Calculate hours: <pre>hours = transmissionTime / 3600</pre> </li>
+    <li>Calculate minutes: <pre>minutes = (transmissionTime % 3600) / 60</pre> </li>
+    <li>Calculate seconds: <pre>seconds = transmissionTime % 60</pre> </li>
+    <li>Display the calculated transmission time.</li>
+    </ul>
+
+</body>
+</html>
+
+<h2>Pseudocode for file transmission Calculation</h2>
+<pre>
+BEGIN 
+    initialize transmissionRate AS integer = 960 // in characters per second
+    initilalize bytesPerCharacter AS integer = 1 // 1 character = 1 byte
+    declare fileSize AS long integer
+    declare totalCharacters AS long integer
+    declare transmissionTime AS long integer
+    declare hours AS long integer
+    declare minutes AS long integer
+    declare seconds AS long integer 
+  
+  output "Enter the file size in bytes: "
+  input fileSize
     
-    Total Seconds,total minutes,total hours and total days
+   totalCharacters = fileSize / bytesPerCharacter
+   transmissionTime = totalCharacters / transmissionRate
     
-output: time taken
+   hours = transmissionTime / 3600
+   minutes = (transmissionTime % 3600) / 60
+   seconds = transmissionTime % 60
 
-pseducod:
+  output "Time to send the file: " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds."
+END
+</pre>
 
-    step1:start
-     
-    step2:read input
-     
-    step3: calculate timetaken for days,hours, minutes and secondsas
-     
-    Calculate Days:
-    days = Total seconde /(24*3600)
-
-    Calculate Hours:
-     hours = total seconds/3600
-
-    Calculate Minutes:
-    minutes = total seconds/60
+</body>
+</html>
+<html>
+  <h2> Flowchart of BMI</h2>
+  <div align = "left">
+  <a href="https://github.com/user-attachments/assets/0330b22f-e27a-49e3-8665-4919b50282cc" target="_blank">Click here to see the flowchart of the file transmission calculator </a>
     
-     step4:print Output for 
-
-    -Days,Hours,Minutes,Seconds
-    step4:stop
+</html>
