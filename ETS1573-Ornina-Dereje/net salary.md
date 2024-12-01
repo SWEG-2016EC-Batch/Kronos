@@ -5,11 +5,8 @@ Algorithm
 
 -Basic Salary: The fixed income.
 
--Weekly Work Hours: Regular working hours (not directly used for the calculation in this case).
-
--Extra Hours Worked: The overtime hours worked during the week.
-
--Overtime Bonus Rate: The extra pay per hour of overtime.
+-Weekly Work Hours: Regular working hours 
+-Bonus Rate: our bonus
 
 2.Process:
 
