@@ -20,7 +20,7 @@ time_in_seconds=static_cast<double>(filesize)/transmissionrate;
 
 //converting the time in seconds in to hours and minutes
 time_in_minutes=static_cast<int>(ceil(time_in_seconds/60));
-time_in_hours=static_cast<int>(ceil(time_in_seconds/60));
+time_in_hours=static_cast<int>(ceil(time_in_minutes/60));
 
 cout<<"The time takes to send the file size of " <<filesize<< " bytes with transmission rate of "<<transmissionrate<<" character/second is "<<endl;
  cout<<"Seconds : "<<time_in_seconds<<" seconds"<<endl;
