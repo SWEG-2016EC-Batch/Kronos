@@ -31,32 +31,13 @@
 <h4>Operations:</h4>
 
 <ul>
-    <li>Read the first name from the user.</li>
-    <li>Read the last name from the user.</li>
-    <li>Read the weekly working hours from the user.</li>
-    <li>Read the bonus rate per hour from the user.</li>
-    <li>Read the base salary from the user.</li>
-</ul>
-
-<ul>
-    <li><strong>Calculate Bonus Payment:</strong>
-        <pre>bonusPayment = bonusRate * workingHours</pre>
-    </li>
-    <li><strong>Calculate Gross Salary:</strong>
-        <pre>grossSalary = baseSalary + bonusPayment</pre>
-    </li>
-    <li><strong>Calculate Pension:</strong>
-        <pre>pension = baseSalary * 0.05</pre>
-    </li>
-    <li><strong>Calculate Tax:</strong>
-        <pre>tax = baseSalary * 0.15</pre>
-    </li>
-    <li><strong>Calculate Net Salary:</strong>
-        <pre>netSalary = grossSalary - (pension + tax)</pre>
-    </li>
-</ul>
-
-<ul>
+    <li>Read the first name and last name from the user.</li>
+    <li>Read the weekly working hours, the bonus rate and base salary from the user.</li>
+    <li>Calculate Bonus Payment: <pre> bonus_payment = bonus_rate * working_hours</pre>  </li>
+    <li>Calculate Gross Salary: <pre> gross_salary = base_salary + bonus_payment</pre></li>
+    <li>Calculate Pension: <pre> pension = base_salary * 0.05</pre> </li>
+    <li>Calculate Tax: <pre> tax = base_salary * 0.15</pre> </li>
+    <li>Calculate Net Salary: <pre> net_salary = gross_salary - (pension + tax)</pre> </li>
     <li>Display the employee's full name.</li>
     <li>Display the bonus payment, gross salary, and net salary of the employee.</li>
 </ul>
@@ -69,59 +50,44 @@
 <pre>
 BEGIN
 
-    // Declare variables
-    DECLARE FirstName, LastName AS STRING
-    DECLARE workingHours AS DOUBLE
-    DECLARE bonusRate AS DOUBLE
-    DECLARE baseSalary AS DOUBLE
-    DECLARE bonusPayment AS DOUBLE
-    DECLARE grossSalary AS DOUBLE
-    DECLARE pension AS DOUBLE
-    DECLARE tax AS DOUBLE
-    DECLARE netSalary AS DOUBLE
-    DECLARE FullName AS STRING
+    declare Firstname, Lastname AS string
+    declare working_hours AS double
+    declare bonus_rate AS double
+    declare base_salary AS double
+    declare bonus_payment AS double
+    declare gross_salary AS double
+    declare pension AS double
+    declare tax AS double
+    declare net_salary AS double
+    declare Fullname AS string
     
-    // Input first name
-    OUTPUT "Enter the first name of the person"
-    INPUT FirstName
+    output "Enter the first name of the person"
+    input Firstname
     
-    // Input last name
-    OUTPUT "Enter the last name of the person"
-    INPUT LastName
+    output "Enter the last name of the person"
+    input Lastname
     
-    // Concatenate first and last name
-    FullName = FirstName + " " + LastName
+    Fullname = Firstname + " " + Lastname
     
-    // Input weekly working hours
-    OUTPUT "Enter weekly working hours:"
-    INPUT workingHours
+    output "Enter weekly working hours:"
+    input working_hours
+    output "Enter bonus rate per hour:"
+    input bonus_rate
+    output "Enter base salary:"
+    input base_salary
     
-    // Input bonus rate per hour
-    OUTPUT "Enter bonus rate per hour:"
-    INPUT bonusRate
-
-    // Input base salary
-    OUTPUT "Enter base salary:"
-    INPUT baseSalary
-    
-    // Calculate bonus payment
-    bonusPayment = bonusRate * workingHours
-    
-    // Calculate gross salary
-    grossSalary = baseSalary + bonusPayment
-    
-    // Calculate pension and tax
-    pension = baseSalary * 0.05
-    tax = baseSalary * 0.15
-    
-    // Calculate net salary
-    netSalary = grossSalary - (pension + tax)
+    // Calculate bonus payment, grosssalary, pension, tax and netsalary
+    bonus_payment = bonus_rate * working_hours
+    gross_salary = base_salary + bonus_payment
+    pension = base_salary * 0.05
+    tax = base_salary * 0.15
+    net_salary = gross_salary - (pension + tax)
     
     // Output payment details
-    OUTPUT "Dear " + FullName + ", your payment for this month is:"
-    OUTPUT "Bonus Payment: $" + bonusPayment
-    OUTPUT "Gross Salary: $" + grossSalary
-    OUTPUT "Net Salary: $" + netSalary
+    OUTPUT "Dear " + Fullname + ", your payment for this month is:"
+    OUTPUT "Bonus Payment: $" + bonus_payment
+    OUTPUT "Gross Salary: $" + gross_salary
+    OUTPUT "Net Salary: $" + net_salary
 
 END
 </pre>
@@ -131,7 +97,7 @@ END
 <html>
   <h2> Flowchart of BMI</h2>
   <div align = "left">
-  <a href="https://github.com/user-attachments/assets/eda39111-6c68-4bd0-9851-edede2a93f36" target="_blank">Click here to see the flowchart of the BMI calculator </a>
+  <a href="https://github.com/user-attachments/assets/eda39111-6c68-4bd0-9851-edede2a93f36" target="_blank">Click here to see the flowchart of the salary calculator </a>
     
 </html>
 
