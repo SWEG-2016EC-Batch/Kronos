@@ -3,39 +3,39 @@
 
 using namespace std;
 
-    string FirstName,LastName;
-    double workingHours, bonusRate, baseSalary;
+    string Firstname,Lastname;
+    double working_hours, bonus_rate, base_salary;
 
 int main() {
 
     cout<<" Enter the first name of the person"<<endl;
-    cin>>FirstName;
+    cin>>Firstname;
      cout<<" Enter the last name of the person"<<endl;
-    cin>>LastName;
-     string FullName = (FirstName +" "+ LastName);
+    cin>>Lastname;
+     string Fullname = (Firstname +" "+ Lastname);
 
     cout << "Enter weekly working hours: "<<endl;
-    cin >> workingHours;
+    cin >> working_hours;
 
     cout << "Enter bonus rate per hour: "<<endl;
-    cin >> bonusRate;
+    cin >> bonus_rate;
 
     cout << "Enter base salary: "<<endl;
-    cin >> baseSalary;
+    cin >> base_salary;
 
-    double bonusPayment = bonusRate * workingHours;
-    double grossSalary = baseSalary + bonusPayment;
+    double bonus_payment = bonus_rate * working_hours;
+    double gross_salary = base_salary + bonus_payment;
 
-    double pension = baseSalary * 0.05;
-    double tax = baseSalary * 0.15;
+    double pension = base_salary * 0.05;
+    double tax = base_salary * 0.15;
 
-    double netSalary = grossSalary - (pension + tax);
+    double net_salary = gross_salary - (pension + tax);
 
-    cout <<"Dear "<< FullName <<" your payment for this month is "<< endl;
+    cout <<"Dear "<< Fullname <<" your payment for this month is "<< endl;
 
-    cout << "Bonus Payment: $" << bonusPayment << endl;
-    cout << "Gross Salary: $" << grossSalary << endl;
-    cout << "Net Salary: $" << netSalary << endl;
+    cout << "Bonus Payment: $" << bonus_payment << endl;
+    cout << "Gross Salary: $" << gross_salary << endl;
+    cout << "Net Salary: $" << net_salary << endl;
     return 0;
 }
 
