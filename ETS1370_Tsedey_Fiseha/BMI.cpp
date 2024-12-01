@@ -1,3 +1,5 @@
+//make a program that calculate the  body mass index(BMI) of a person and determine if a person is in normal weight,under weight or over weight.BMI is calculated as (BMI=w/(h*h). make the program to work for multiple person before terminated./*
+
 include <iostream>
 using namespace std;
 int main() {
