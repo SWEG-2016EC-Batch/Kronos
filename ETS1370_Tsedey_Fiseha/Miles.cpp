@@ -9,6 +9,6 @@ int main()
     cout <<"input the miles per gallon your automobile can be driven"<<endl;
     cin>>miles_per_gallon;
    no_of_miles=(tank_capacity *miles_per_gallon);
-   cout<< "the miles your automobile goes with out refueling is:  "<<no_of_miles;
+   cout<< "the miles your automobile goes with out refueling is:  "<<no_of_miles<<endl;
     return 0;
 }
