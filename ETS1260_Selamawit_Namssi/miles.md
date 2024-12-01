@@ -18,7 +18,7 @@
 <h4>Output:</h4>
 
 <ul>
-    <li> The total distance the automobile can be driven without refueling, calculated from the fuel tank capacity and miles per gallon.</li>
+    <li> The total distance the automobile can be driven without refueling</li>
 </ul>
 
 <h4>Operations:</h4>
@@ -26,13 +26,10 @@
 <ul>
     <li>Read the fuel tank capacity from the user.</li>
     <li>Read the miles per gallon from the user.</li>
-</ul>
-
 <pre>
 Calculate the total distance using the formula:
 totaldistance = tankcapacity * milespergallon
 </pre>
-<ul>
     <li>Display the calculated total distance to the user.</li>
 </ul>
 
@@ -43,18 +40,18 @@ totaldistance = tankcapacity * milespergallon
 
 <pre>
 BEGIN
-    DECLARE tankcapacity AS DOUBLE
-    DECLARE milespergallon AS DOUBLE
-    DECLARE totaldistance AS DOUBLE
+    declare tankcapacity AS double
+    declare milespergallon AS double
+    declare totaldistance AS double
     
-    OUTPUT "Enter the capacity of the fuel tank in gallons: "
-    INPUT tankcapacity
+    output "Enter the capacity of the fuel tank in gallons: "
+    input tankcapacity
     
-    OUTPUT "Enter the miles per gallon the automobile can drive: "
-    INPUT milespergallon
+    output "Enter the miles per gallon the automobile can drive: "
+    input milespergallon
   
     totaldistance = tankcapacity * milespergallon
-    OUTPUT "The automobile can be driven " + totaldistance + " miles without refueling."
+    output "The automobile can be driven " + totaldistance + " miles without refueling."
 END
 </pre>
 
