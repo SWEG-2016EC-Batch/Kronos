@@ -80,6 +80,6 @@ END
 <html>
   <h2> Flowchart of BMI</h2>
   <div align = "left">
-  <a href="https://app.diagrams.net/953d052b-14e6-4cc4-991b-cf8ad57121c4" target="_blank">Click here to see the flowchart of the BMI calculator </a>
+  <a href="https://github.com/user-attachments/assets/5706e36f-dd20-46fc-84ad-bd576ffef252" target="_blank">Click here to see the flowchart of the BMI calculator </a>
     
 </html>
