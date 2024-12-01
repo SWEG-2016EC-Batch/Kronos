@@ -52,5 +52,5 @@ END
 </body>
 </html>
 <h2> Flowchart for the power calculator </h2>
-<a href=" https://1drv.ms/i/c/105b6da710b596d0/EdpQPfE9MZhEhleIaTiEJycBXw0wLZj9cmtT7aO1ipVHlA?e=plOSsD">Click here to see the flowchart of the power calculator</a>
+<a href=" https://1drv.ms/i/c/105b6da710b596d0/EdpQPfE9MZhEhleIaTiEJycBXw0wLZj9cmtT7aO1ipVHlA?e=plOSsD " >Click here to see the flowchart of the power calculator</a>
 </html>
