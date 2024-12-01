@@ -14,5 +14,5 @@ flowchart TD
     K --> L[Calculate pension = basic salary * 0.05]
     L --> M[Calculate net salary = gross salary - tax - pension]
     M --> N[/Display Results/]
-    N --> O((End])
-```
+    N --> O([End])
+
