@@ -35,7 +35,7 @@ Algorithm
   - print the net salary after all deductions.
 
 
-## 
+## Algorithm Design 
 
 Step 1: Start
 
