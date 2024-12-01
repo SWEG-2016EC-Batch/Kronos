@@ -24,6 +24,7 @@
             <li> Underweight </li>
             <li> Normal weight </li>
             <li> Overweight </li>
+            <li> obese </li>
         </ul>
 </ul>
 
