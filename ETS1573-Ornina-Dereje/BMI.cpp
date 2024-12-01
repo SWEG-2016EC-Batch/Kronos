@@ -33,6 +33,6 @@ else {cout<<"invalid input. "<<endl;}
 cout<<"Do you want to continue ? (if you want to continue write Y  ) : ";
 cin>>continue_;
     }
-while(continue_==Y);
+while(continue_=='Y');
 return 0;
 }
