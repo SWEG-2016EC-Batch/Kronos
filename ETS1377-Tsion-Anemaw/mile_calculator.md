@@ -45,3 +45,13 @@ Step 5: Output Result
         5.1. Display the result: "The automobile can be driven mile miles without refueling."
 
 Step 6: End
+
+# Flowchart
+```mermaid
+flowchart TD
+    A([Start]) --> B[/read for fuel in gallons/]
+    B --> C[/read for miles per gallon/]
+    C --> D[Calculate miles = fuel in gallons * miles per gallon]
+    D --> E[/Output the number of miles the automobile can be driven/]
+    E --> F([End])
+```
