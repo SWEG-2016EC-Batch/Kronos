@@ -1,5 +1,3 @@
-Algorithm for the mile calculator
-
 1.Input:
 
 the fuel tank capacity in gallons.
@@ -13,3 +11,6 @@ the fuel tank capacity in gallons.
 3.Output:
 
 -the total mile
+
+
+
