@@ -20,7 +20,7 @@ Gross Salary = Basic Salary + Bonus
 
 Tax Deduction:
 
-Tax=Gross Salary×0.15
+Tax=((base_salary-pension)+(bonus))*0.15;
 
 Pension Deduction:
 
