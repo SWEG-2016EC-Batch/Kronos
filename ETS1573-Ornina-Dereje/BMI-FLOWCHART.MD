@@ -17,8 +17,7 @@ flowchart TD
   J -- No --> L[INVALID]
   
   G --> M[/Continue? y/n/ ]
-  I --> M
-  K --> M
+ 
  
   
   M -- y --> B
