@@ -58,6 +58,6 @@ END
 <html>
   <h2> Flowchart of BMI</h2>
   <div align = "left">
-  <a href="">Click here to see the flowchart of the miles calculator </a>
+  <a href="https://github.com/user-attachments/assets/af33b5c6-a836-43a4-95fa-5aed346f56a6">Click here to see the flowchart of the miles calculator </a>
     
 </html>
