@@ -18,16 +18,12 @@ pseducod:
     days = Total seconde /(24*3600)
 
     Calculate Hours:
-     hours = remaining seconds/3600
+     hours = total seconds/3600
 
     Calculate Minutes:
-    minutes = remaining seconds/60
-
-    remaining Seconds = remaining Seconds modulus(%) 60
-
-
-
-    step4:print Output for 
+    minutes = total seconds/60
+    
+     step4:print Output for 
 
     -Days,Hours,Minutes,Seconds
-step4:stop
+    step4:stop
