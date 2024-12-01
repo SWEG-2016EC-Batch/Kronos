@@ -38,10 +38,11 @@
      - Based on the calculated BMI,
      - If BMI < 18.5: Label as Underweight.
      - If 18.5 ≤ BMI ≤ 24.9: Label as Normal weight.
-     - If BMI > 24.9: Label as Overweight.
+     - If 25 ≤ BMI ≤ 29.9: Label as Overweight 
+       - If BMI > 30: Label as Overweight.
 4. Ask for User Consent:
    - Prompt the user to decide if they want to perform another calculation or terminate the program.
-   - If the user's choice is yes, continue the program.
+   - If the user's choice is 1 , continue the program.
    - Otherwise, terminate the program.
 </pre>
 </body>
