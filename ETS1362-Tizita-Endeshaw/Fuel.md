@@ -28,7 +28,7 @@
     <li>Read the miles per gallon from the user.</li>
 <pre>
 Calculate the total distance using the formula:
-totaldistance = tankcapacity * milespergallon
+miles driven = fuel tank capacity * miles per gallon
 </pre>
     <li>Display the calculated total distance to the user.</li>
 </ul>
@@ -40,18 +40,18 @@ totaldistance = tankcapacity * milespergallon
 
 <pre>
 BEGIN
-    declare tankcapacity AS double
-    declare milespergallon AS double
-    declare totaldistance AS double
+    declare fuel tank capacity AS double
+    declare miles per gallon AS double
+    declare miles driven AS double
     
     output "Enter the capacity of the fuel tank in gallons: "
-    input tankcapacity
+    input fuel tank capacity
     
     output "Enter the miles per gallon the automobile can drive: "
-    input milespergallon
+    input miles per gallon
   
-    totaldistance = tankcapacity * milespergallon
-    output "The automobile can be driven " + totaldistance + " miles without refueling."
+    miles driven = fuel tank capacity * miles per gallon
+    output "The automobile can be driven " + miles driven + " miles without refueling."
 END
 </pre>
 
