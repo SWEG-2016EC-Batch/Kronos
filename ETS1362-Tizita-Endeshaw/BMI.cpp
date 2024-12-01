@@ -24,9 +24,9 @@ cout<<"your BMI is : "<<BMI<<endl;
 //Determine whether the person is normal weight, under weight, over weight or obesity
 if(BMI < 18.5){
     cout<<"you are under weight." <<endl;}
-else if(BMI>=18.5 && BMI<=25) {
+else if(BMI>=18.5 && BMI<=24.9) {
     cout<<"you are normal weight."<<endl;}
-else if(BMI>=25 && BMI <=30){
+else if(BMI>=25 && BMI <=29.9){
     cout<<"you are over weight."<<endl;}
 else if(BMI>=30){
     cout<<"you are obese "<<endl;}
