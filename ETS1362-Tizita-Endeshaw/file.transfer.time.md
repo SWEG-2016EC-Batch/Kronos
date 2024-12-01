@@ -25,42 +25,36 @@
 <ul>
     <li>Read the file size in bytes from the user.</li>
     <li>time in seconds :</li>
-   <pre> Formula: time in seconds = fileSize / bytesPerCharacter </pre>
-   <li>Calculate Transmission Time:</li> 
-   <pre> Formula: transmissionTime = totalCharacters / transmissionRate </pre>
-         Convert Transmission Time to Hours, Minutes, and Seconds:
-    <li>Calculate hours: <pre>hours = transmissionTime / 3600</pre> </li>
-    <li>Calculate minutes: <pre>minutes = (transmissionTime % 3600) / 60</pre> </li>
-    <li>Calculate seconds: <pre>seconds = transmissionTime % 60</pre> </li>
-    <li>Display the calculated transmission time.</li>
+   <pre> Formula: time in seconds = static_cast<double>(fileSize) / transmissionrate </pre>
+   Convert time in seconds to Hours and Minutes:
+    <li>Calculate hours: <pre>static_cast<double>(ceil(time in minutes/60))</pre> </li>
+    <li>Calculate minutes: <pre> static_cast<double>(ceil(time in seconds/60))</pre> </li>
+    <li>Display the calculated file transfer time.</li>
     </ul>
 
 </body>
 </html>
 
-<h2>Pseudocode for file transmission Calculation</h2>
+<h2>Pseudocode for file transfer time Calculation</h2>
 <pre>
 BEGIN 
     initialize transmissionRate AS integer = 960 // in characters per second
-    initilalize bytesPerCharacter AS integer = 1 // 1 character = 1 byte
-    declare fileSize AS long integer
-    declare totalCharacters AS long integer
-    declare transmissionTime AS long integer
-    declare hours AS long integer
-    declare minutes AS long integer
-    declare seconds AS long integer 
+    declare fileSize AS integer
+    declare time in seconds AS integer
+    declare hours AS integer
+    declare minutes AS integer
+    
   
   output "Enter the file size in bytes: "
   input fileSize
     
-   totalCharacters = fileSize / bytesPerCharacter
-   transmissionTime = totalCharacters / transmissionRate
-    
-   hours = transmissionTime / 3600
-   minutes = (transmissionTime % 3600) / 60
-   seconds = transmissionTime % 60
 
-  output "Time to send the file: " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds."
+   time in seconds =static_cast<double>(fileSize) / transmissionrate 
+    
+  time in hours = static_cast<double>(ceil(time in minutes/60))
+  time in minutes = static_cast<double>(ceil(time in seconds/60))
+   
+  output "Time to send the file: " time in hours :  " time in hours, " time in minutes : " time in  minutes, " time in seconds : "time in seconds."
 END
 </pre>
 
