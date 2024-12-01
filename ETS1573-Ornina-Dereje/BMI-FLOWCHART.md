@@ -2,7 +2,7 @@
 
 ```mermaid
 flowchart TD
-  A[Start] --> B[/Enter height in meters/]
+  A([Start]) --> B[/Enter height in meters/]
   B --> C[/Enter weight in kilograms/]
   C --> D[Calculate BMI: weight / height * height]
   D --> E[/print BMI/]
