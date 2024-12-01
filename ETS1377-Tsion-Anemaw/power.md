@@ -5,7 +5,7 @@
      - Prompt the user to enter the exponent.
 2. Process:
    
-     - result = pow(base,exponent)
+     - result = base^exponent
 
 3. Output:
 
