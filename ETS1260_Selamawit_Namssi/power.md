@@ -7,27 +7,49 @@
 <body>
 <div align ="left">
 <h2> Problem analysis </h2>
+  
+<h4>Input:</h4>
+<ul>
+    <li>Base (x):The base number to be raised to a power.</li>
+    <li>Exponent (y):The power to which the base number will be raised.</li>
+</ul>
+
+<h4>Output:</h4>
+
+ <ul> <li> The result of the number is </li> </ul>
+    
+<h4>Operations:</h4>
+<ul>
+    <li>Read the base number x from the user.</li>
+    <li>Read the exponent y from the user.</li>
+    <li>Calculate the result of using the formula:
+        <pre>result = pow(x, y)</pre> </li>
+   <li>Display the calculated result in a formatted message.</li>
+</ul>
+
+</body>
+</html>
+  
 <h2>Pseudocode for Power Calculation</h2>
 
 <pre>
 BEGIN
-    DECLARE x AS FLOAT
-    DECLARE y AS FLOAT
-    DECLARE result AS FLOAT
+    declare x AS float
+    declare y AS float
+    declare result AS float
   
-    OUTPUT "Enter the base of the number"
-    INPUT x
+    output "Enter the base of the number"
+    input x
     
-    OUTPUT "By what power do you want to raise the base of the number?"
-    INPUT y
+    output "By what power do you want to raise the base of the number?"
+    input y
     
-    // Calculate the result of x raised to the power of y
     result = pow(x, y)
-    OUTPUT "The result of the number is: " + result
+    output "The result of the number is: " + result
 END
 </pre>
 
 </body>
 </html>
 <h2> Flowchart for the power calculator </h2>
-<a href = "   "click here the see the flowcart of the power calculator </a>
+<a href="https://github.com/user-attachments/assets/93b83ea6-35f2-4562-90e4-69acb9c6ee59" target="_blank">Click here to see the flowchart of the power calculator</a>
