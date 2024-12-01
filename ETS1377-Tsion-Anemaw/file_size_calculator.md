@@ -1,4 +1,4 @@
-Algorithm to Calculate Transmission Time
+### Algorithm to Calculate Transmission Time
 1. Input:
 
      - File size in bytes.
@@ -28,10 +28,52 @@ Algorithm to Calculate Transmission Time
         Remaining Seconds = Remaining Seconds
 3. Output:
 
-      Days
+   - Days
      
-      Hours
+   - Hours
      
-      Minutes
+   - Minutes
      
-      Seconds
+   - Seconds
+
+## Algorithm Design
+
+  ## Pseudocode
+
+Step 1: Start
+
+Step 2: Initialize Variables
+
+          2.1. Declare variables days, hours, minutes, seconds.
+          
+          2.2. Set transmission_rate = 960 (characters per second).
+
+Step 3: Input File Size
+
+          3.1. Prompt the user to enter the file size in bytes.
+          
+          3.2. Store the input value in file_size.
+
+Step 4: Calculate Total Time in Seconds
+
+          4.1. Calculate total_seconds = file_size / transmission_rate.
+
+Step 5: Break Down Total Time into Days, Hours, Minutes, and Seconds
+
+          5.1. Calculate days = total_seconds / (24 * 3600) (full days).
+          
+          5.2. Update total_seconds = total_seconds % (24 * 3600) (remaining seconds after full days).
+          
+          5.3. Calculate hours = total_seconds / 3600 (full hours).
+          
+          5.4. Update total_seconds = total_seconds % 3600 (remaining seconds after full hours).
+          
+          5.5. Calculate minutes = total_seconds / 60 (full minutes).
+          
+          5.6. Calculate seconds = total_seconds % 60 (remaining seconds).
+
+Step 6: Output Transmission Time
+
+          6.1. Display the result: "Transmission Time: days, hours, minutes, seconds".
+
+Step 7: End
