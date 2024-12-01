@@ -1,4 +1,3 @@
-BMI Calculation Algorithm
 
 1.Input:
 
