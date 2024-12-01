@@ -1,7 +1,10 @@
 input: weight, height 
+
 process:read input 
         display output 
-        calculat BMI as BMI=weight/(height*height)
+        calculat BMI as 
+        
+         BMI=weight/(height*height)
         
 output: BMI
 
