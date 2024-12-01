@@ -51,9 +51,9 @@
 <h2> Pseudocode for BMI Calculation </h2>
 <pre>
 BEGIN
-    set choice = "yes"
-    while choice == "yes" DO
-        output "Enter the weight of a person in kilograms"
+    set choice = "1"
+    while choice == "1" DO
+        input "Enter the weight of a person in kilograms"
         input weight
         output "Enter the height of a person in meters"
         input height
@@ -64,10 +64,12 @@ BEGIN
             output "status = you are UNDERWEIGHT"
         else if BMI >= 18.5 AND BMI <= 24.9 then
             output "status = you are NORMAL WEIGHT"
-        else
-            output "status = you are OVERWEIGHT"
+       else if BMI>= 25 AND BMI <=29.9 then 
+         output "status = you are OVERWEIGHT"
+          else
+            output "status = you are OBESE"
         end if statement
-        output "To proceed with the calculation, please indicate your consent by writing yes or pressing any key to terminate the process."
+        output "To proceed with the calculation, please indicate your consent by writing 1 or pressing any key to terminate the process."
         input choice
     end while loop
 END
