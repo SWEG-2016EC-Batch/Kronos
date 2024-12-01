@@ -33,3 +33,61 @@ Algorithm
 3. Output:
 
   - print the net salary after all deductions.
+
+
+## 
+
+Step 1: Start
+
+Step 2: Initialize Variables
+
+      2.1. Declare variables name, basic_salary, weekly_work_hours, bonus_rate, extra_hours, bonus, gross_salary, tax, pension, and net_salary.
+      2.2. Set bonus = 0 initially.
+
+Step 3: Input Data
+
+      3.1. Prompt the user to enter their name.
+      3.2. Store the input value in name.
+      3.3. Prompt the user to enter their basic salary.
+      3.4. Store the input value in basic_salary.
+      3.5. Prompt the user to enter their weekly work hours.
+      3.6. Store the input value in weekly_work_hours.
+      3.7. Prompt the user to enter their extra hours worked.
+      3.8. Store the input value in extra_hours.
+
+Step 4: Calculate Bonus
+      
+      4.1. If extra_hours > 0, prompt the user to enter their overtime bonus rate per hour.
+      4.2. Store the input value in bonus_rate.
+      4.3. Calculate the bonus:
+      - bonus = extra_hours * bonus_rate.
+
+Step 5: Calculate Gross Salary
+
+      5.1. Calculate the gross salary:
+      - gross_salary = basic_salary + bonus.
+
+Step 6: Calculate Deductions
+
+      6.1. Calculate the tax deduction:
+      - tax = gross_salary * 0.15 (15% tax).
+      6.2. Calculate the pension deduction:
+      - pension = basic_salary * 0.05 (5% pension).
+
+Step 7: Calculate Net Salary
+
+      7.1. Calculate the net salary:
+      - net_salary = gross_salary - tax - pension.
+
+Step 8: Output Results
+
+      8.1. Display the results:
+      - "Your name is name".
+      - "Basic Salary: basic_salary".
+      - "Bonus: bonus".
+      - "Gross Salary: gross_salary".
+      - "Tax Deduction: tax".
+      - "Pension Deduction: pension".
+      - "Net Salary: net_salary".
+
+Step 9: End
