@@ -40,3 +40,15 @@ Step 5: Output Result
      5.1. Display the result: "The result is result."
 
 Step 6: End
+
+# Flowchart 
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[/read base number/]
+    B --> C[/read exponent number/]
+    C --> D[Calculate result = base ^ exponent]
+    D --> E[/Display the result/]
+    E --> F([End])
+```
+
