@@ -9,7 +9,7 @@ int main (){
 //Declare variables
 double height, weight, BMI;
 int number_of_people;
-int i,continue_;
+char user;
 do{
 //Receive input(weight & height ) from the user
 cout<<"please enter your weight in kilograms: ";
