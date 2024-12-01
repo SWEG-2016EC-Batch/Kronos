@@ -1,10 +1,55 @@
-Input: x and y
-opertation: x the power of y
-output: x^y
+<a name="readme-top"></a>
 
-Algorithm
-step1: start the program
-step2: read the input x and y
-step3:calculate x the power of y by pow(x,y)function
-step4: print or display x^y
-step5:Terminate the program
+<div align="center">
+  <h1><b> Power calculator </b></h1>
+  
+<html>
+<body>
+<div align ="left">
+<h2> Problem analysis </h2>
+  
+<h4>Input:</h4>
+<ul>
+    <li>Base (x):The base number to be raised to a power.</li>
+    <li>Exponent (y):The power to which the base number will be raised.</li>
+</ul>
+
+<h4>Output:</h4>
+
+ <ul> <li> x the power of y is </li> </ul>
+    
+<h4>Operations:</h4>
+<ul>
+    <li>Read the base number x from the user.</li>
+    <li>Read the exponent y from the user.</li>
+    <li>Calculate x the power of y of using the formula:
+        <pre>x the power of y = pow(x, y)</pre> </li>
+   <li>Display the calculated x the power of y .</li>
+</ul>
+
+</body>
+</html>
+  
+<h2>Pseudocode for Power Calculation</h2>
+
+<pre>
+BEGIN
+    declare x AS double
+    declare y AS double 
+    declare result AS double 
+  
+    output "Enter the value of x"
+    input x
+    
+    output "Enter the value of y"
+    input y
+    
+    result = pow(x, y)
+    output "The x the power of y of the number is: " x the power of y
+END
+</pre>
+
+</body>
+</html>
+<h2> Flowchart for the power calculator </h2>
+<a href=" ">Click here to see the flowchart of the power calculator</a>
