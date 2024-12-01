@@ -32,7 +32,7 @@
 1. Declare Inputs:
    - Define variables for weight and height.
 2. Calculate BMI:
-     <pre> BMI = weight / (height * height) </pre>
+     BMI = weight / (height * height)
 3. Label the BMI:
      - Based on the calculated BMI,
      - If BMI < 18.5: Label as Underweight.
