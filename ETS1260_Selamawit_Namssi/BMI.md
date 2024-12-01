@@ -6,7 +6,7 @@
 <html>
 <body>
 <div align = "left">
-<h2> Problem analysis </h2>
+<h2> Problem analysis </h2> 
 
 <h4>Input</h4>
 
