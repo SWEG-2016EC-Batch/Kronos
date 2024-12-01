@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int  tank_capacity, miles_per_gallon, no_of_miles;
+    double tank_capacity, miles_per_gallon, no_of_miles;
     cout <<"enter fule tank capacity  of your automobile in gallon"<<endl;
     cin>> tank_capacity;
     cout <<"input the miles per gallon your automobile can be driven"<<endl;
