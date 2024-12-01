@@ -16,7 +16,10 @@ flowchart TD
   J -- Yes --> K[Overweight]
   J -- No --> L[INVALID]
   
-  G --> M[/Continue? y/n/ ]
+ G --> M[/Continue? y/n/]
+  I --> M
+  K --> M
+  L --> M
  
  
   
