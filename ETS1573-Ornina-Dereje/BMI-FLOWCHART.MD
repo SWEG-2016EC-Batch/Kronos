@@ -24,7 +24,7 @@ flowchart TD
  
   
   M -- y --> B
-  M -- n -->N[End]
+  M -- n -->N([End])
 
 
  
