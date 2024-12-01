@@ -17,15 +17,15 @@
 <h4>Output:</h4>
 
    <ul>
-    <li>Transmission Time:</li>
+    <li>File transfer Time:</li>
     </ul>
 
 <h4>Operations:</h4>
 
 <ul>
     <li>Read the file size in bytes from the user.</li>
-    <li>Calculate Total Characters:</li>
-   <pre> Formula: totalCharacters = fileSize / bytesPerCharacter </pre>
+    <li>time in seconds :</li>
+   <pre> Formula: time in seconds = fileSize / bytesPerCharacter </pre>
    <li>Calculate Transmission Time:</li> 
    <pre> Formula: transmissionTime = totalCharacters / transmissionRate </pre>
          Convert Transmission Time to Hours, Minutes, and Seconds:
