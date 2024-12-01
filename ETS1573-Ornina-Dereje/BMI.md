@@ -12,7 +12,7 @@ BMI = Weight/(Height^2)
 
 3.Output:
 
--print the BMI value
+-print the BMI value & prompt for continuation
 
 -Determine the BMI category:
 
