@@ -22,16 +22,16 @@
 
 <h4>Operations:</h4>
 
-<ul>
-    <li>Read the file size in bytes from the user.</li>
-    <li>Calculate Total Characters:</li>
-   <pre> Formula: totalCharacters = fileSize / bytesPerCharacter </pre>
+<ul>>
    <li>Calculate Transmission Time:</li> 
    <pre> Formula: transmissionTime = totalCharacters / transmissionRate </pre>
-         Convert Transmission Time to Hours, Minutes, and Seconds:
-    <li>Calculate hours: <pre>hours = transmissionTime / 3600</pre> </li>
-    <li>Calculate minutes: <pre>minutes = (transmissionTime % 3600) / 60</pre> </li>
-    <li>Calculate seconds: <pre>seconds = transmissionTime % 60</pre> </li>
+         Convert Transmission Time to days, Hours, Minutes, and Seconds:
+  <li>calculate days:<pre>days=total_second/(24*3600)</pre></li>
+  <li>calculate:<pre>total_seconds%=(24*3600)</pre></li>
+    <li>Calculate hours: <pre>hours = total_seconds / 3600</pre> </li>
+  <li>calculate:<pre>total_second%=3600</pre></li>
+    <li>Calculate minutes: <pre>minutes = total_seconds  / 60</pre> </li>
+    <li>Calculate seconds: <pre>seconds = total_seconds % 60</pre> </li>
     <li>Display the calculated transmission time.</li>
     </ul>
 
@@ -44,8 +44,8 @@ BEGIN
     initialize transmissionRate AS integer = 960 // in characters per second
     initilalize bytesPerCharacter AS integer = 1 // 1 character = 1 byte
     declare fileSize AS long integer
-    declare totalCharacters AS long integer
     declare transmissionTime AS long integer
+    decleare days AS long integer
     declare hours AS long integer
     declare minutes AS long integer
     declare seconds AS long integer 
@@ -69,6 +69,6 @@ END
 <html>
   <h2> Flowchart of BMI</h2>
   <div align = "left">
-  <a href="https://github.com/user-attachments/assets/0330b22f-e27a-49e3-8665-4919b50282cc" target="_blank">Click here to see the flowchart of the file transmission calculator </a>
+  <a href="">Click here to see the flowchart of the file transmission calculator </a>
     
 </html>
