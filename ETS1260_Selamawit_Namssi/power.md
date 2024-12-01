@@ -1,7 +1,11 @@
-<dev align="center">
-    <h1> Power calculator </h1>
-<head>
-<dev align ="left">
+<a name="readme-top"></a>
+
+<div align="center">
+  <h1><b> Power calculator </b></h1>
+  
+<html>
+<body>
+<div align ="left">
 <h2> Problem analysis </h2>
 <h2>Pseudocode for Power Calculation</h2>
 
