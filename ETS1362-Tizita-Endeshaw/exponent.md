@@ -44,7 +44,7 @@ BEGIN
     output "Enter the value of y"
     input y
     
-    result = pow(x, y)
+    x the power of y = pow(x, y)
     output "The x the power of y of the number is: " x the power of y
 END
 </pre>
