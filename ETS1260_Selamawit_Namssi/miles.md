@@ -1,82 +1,67 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h1><b> BMI calculator </b></h1>
+  <h1><b> Miles calculator </b></h1>
   
 <html>
 <body>
 <div align = "left">
 <p> <h2> Problem analysis </h2> </p>
 
-<h4>Input</h4>
+<h4>Input:</h4>
+
+  <ul>
+    <li> Fuel Tank Capacity. </li>
+    <li> Miles Per Gallon. </li>
+  </ul>
+
+<h4>Output:</h4>
+
 <ul>
-    <li><strong>Weight:</strong> The weight of a person in kilograms.</li>
-    <li><strong>Height:</strong> The height of a person in meters.</li>
+    <li> The total distance the automobile can be driven without refueling, calculated from the fuel tank capacity and miles per gallon.</li>
 </ul>
 
-<h4>Output</h4>
-<ul>
-    <li><strong>BMI:</strong> The Body Mass Index of the person.</li>
-    <li><strong>Status:</strong> A label indicating whether the individual is:
-        <ul>
-            <li>Underweight</li>
-            <li>Normal weight</li>
-            <li>Overweight</li>
-        </ul>
+<h4>Operations:</h4>
 
+<ul>
+    <li>Read the fuel tank capacity from the user.</li>
+    <li>Read the miles per gallon from the user.</li>
 </ul>
 
-<h4> Operations </h4>
 <pre>
-1. Declare Inputs:
-   - Define variables for weight and height.
-2. Calculate BMI:
-   - Use the formula:
-     BMI = weight / (height * height)
-3. Label the BMI:
-     - Based on the calculated BMI, determine the status:
-     - If BMI < 18.5: Label as Underweight.
-     - If 18.5 ≤ BMI ≤ 24.9: Label as Normal weight.
-     - If BMI > 24.9: Label as Overweight.
-4. Ask for User Consent:
-   - Prompt the user to decide if they want to perform another calculation or terminate the program.
-   - If the user's choice is yes, continue the program.
-   - Otherwise, terminate the program.
+Calculate the total distance using the formula:
+totaldistance = tankcapacity * milespergallon
 </pre>
+<ul>
+    <li>Display the calculated total distance to the user.</li>
+</ul>
+
 </body>
 </html>
-<h2>Pseudocode for BMI Calculation</h2>
+
+<h2>Pseudocode for Miles Calculation</h2>
+
 <pre>
 BEGIN
-    SET choice = "yes"
-    WHILE choice == "yes" DO
-        OUTPUT "Enter the weight of a person in kilograms"
-        INPUT weight
-        OUTPUT "Enter the height of a person in meters"
-        INPUT height
-        BMI = weight / (height * height)
-        OUTPUT "The Body Mass Index (BMI) is: " + BMI
-        // Determine BMI category
-        IF BMI < 18.5 THEN
-            OUTPUT "status = you are UNDERWEIGHT"
-        ELSE IF BMI >= 18.5 AND BMI <= 24.9 THEN
-            OUTPUT "status = you are NORMAL WEIGHT"
-        ELSE
-            OUTPUT "status = you are OVERWEIGHT"
-        END IF
-        // Ask user for consent to continue
-        OUTPUT "To proceed with the calculation, please indicate your consent by writing yes or pressing any key to terminate the process."
-        INPUT choice
-    END WHILE
+    DECLARE tankcapacity AS DOUBLE
+    DECLARE milespergallon AS DOUBLE
+    DECLARE totaldistance AS DOUBLE
+    
+    OUTPUT "Enter the capacity of the fuel tank in gallons: "
+    INPUT tankcapacity
+    
+    OUTPUT "Enter the miles per gallon the automobile can drive: "
+    INPUT milespergallon
+  
+    totaldistance = tankcapacity * milespergallon
+    OUTPUT "The automobile can be driven " + totaldistance + " miles without refueling."
 END
 </pre>
 
-</body>
-</html>
 <html>
   <h2> Flowchart of BMI</h2>
   <div align = "left">
-  <a href="https://github.com/user-attachments/assets/5706e36f-dd20-46fc-84ad-bd576ffef252" target="_blank">Click here to see the flowchart of the BMI calculator </a>
+  <a href="https://github.com/user-attachments/assets/47c65a63-2813-4ab0-b458-1cab639c3a99" target="_blank">Click here to see the flowchart of the miles calculator </a>
     
 </html>
 
