@@ -51,7 +51,7 @@ BEGIN
     input miles per gallon
   
     miles driven = fuel tank capacity * miles per gallon
-    output "The automobile can be driven " + miles driven + " miles without refueling."
+    output "The automobile can be driven "  miles driven  " miles without refueling."
 END
 </pre>
 
