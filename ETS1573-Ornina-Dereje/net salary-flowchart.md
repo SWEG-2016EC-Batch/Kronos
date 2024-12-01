@@ -14,6 +14,6 @@ A[Start] --> B[Input: Enter your name]
     K --> L[Output: Pension = pension]
     L --> M[Calculate: tax = base_salary - pension + bonus * 0.15]
     M --> N[Output: Tax = tax]
-    N --> O[Calculate: net_salary = base_salary - pension + bonus - tax
+    N --> O[Calculate: net_salary = base_salary - pension + bonus - tax]
     O --> P[Output: Your net salary = net_salary]
     P --> Q[End]
