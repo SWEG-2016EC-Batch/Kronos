@@ -1,6 +1,8 @@
-
+<dev align="center">
+    <h1> Power calculator </h1>
 <head>
-
+<dev align ="left">
+<h2> Problem analysis </h2>
 <h2>Pseudocode for Power Calculation</h2>
 
 <pre>
@@ -23,3 +25,5 @@ END
 
 </body>
 </html>
+<h2> Flowchart for the power calculator </h2>
+<a href = "   "click here the see the flowcart of the power calculator </a>
