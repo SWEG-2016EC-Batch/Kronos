@@ -1,4 +1,4 @@
-# Flowchart for Serial Transmission Time Calculation
+# Flowchart for miles driven
 ```mermaid
 flowchart TD
   A([Start]) --> B[/Declare Variables: fuel_tank_capacity, miles_per_gallons, miles_driven/]
