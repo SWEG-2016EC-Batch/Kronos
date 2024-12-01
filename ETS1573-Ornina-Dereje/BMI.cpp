@@ -30,9 +30,9 @@ else if(BMI>=25 && BMI <=29.9){
     cout<<"you are over weight."<<endl;}
 
 else {cout<<"invalid input. "<<endl;}
-cout<<"Do you want to continue ? (if you want to continue write 1 and if you don't enter any number otherthan 1  ) : ";
+cout<<"Do you want to continue ? (if you want to continue write Y  ) : ";
 cin>>continue_;
     }
-while(continue_==1);
+while(continue_==Y);
 return 0;
 }
