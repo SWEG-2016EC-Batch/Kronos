@@ -93,7 +93,8 @@ END
 <html>
   <h2> Flowchart of BMI</h2>
   <div align = "left">
-  <a href="https://github.com/user-attachments/assets/e69d8c0b-61ad-4486-a13d-d3a6b715adbc
+  <a href="https://github.com/user-attachments/assets/607127c8-6f66-4637-8236-78ecb88d66a3
+
 ">Click here to see the flowchart of the salary calculator </a>
     
 </html>
