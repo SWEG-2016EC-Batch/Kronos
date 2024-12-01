@@ -7,10 +7,6 @@
 <body>
 <div align = "left">
 <p> <h2> Problem analysis </h2> </p>
-<head>
-   
-</head>
-<body> </body>
 
 <h4>Input</h4>
 <ul>
