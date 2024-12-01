@@ -63,6 +63,6 @@ END
 <html>
   <h2> Flowchart of BMI</h2>
   <div align = "left">
-  <a href="https://github.com/user-attachments/assets/0330b22f-e27a-49e3-8665-4919b50282cc" target="_blank">Click here to see the flowchart of the file transmission calculator </a>
+  <a href=" ">Click here to see the flowchart of the file transmission calculator </a>
     
 </html>
