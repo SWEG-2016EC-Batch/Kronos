@@ -1,16 +1,10 @@
-1.Input:
+Input:the fuel tank capacity,miles per gallon
+operation: mile driven
+output:Display mile driven
 
-the fuel tank capacity in gallons.
-
--the miles per gallon .
-
-2.Process:
-
--mile = fuel_in_gallon × miles_per_gallons
-
-3.Output:
-
--the total mile
-
-
-
+Algorithm
+step1: start the program.
+step2: Read the input the fuel tank capacity,miles per gallon
+step3: calculate miles driven=fuel tank capacity*miles per gallons
+step4: print miles driven
+step5:End
