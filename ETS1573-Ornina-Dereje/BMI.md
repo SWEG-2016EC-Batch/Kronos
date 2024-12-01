@@ -21,7 +21,7 @@ BMI = Weight/(Height^2)
 
    algorithm
 step1: start the program.
-step2: while continue program is '1'.
+step2: while continue program is 'y'.
 step3: read the input weight and height.
 step4: calculate BMI as weight/height*height.
 step5: If BMI<18.5 then catagory to 'underweight'
