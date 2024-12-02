@@ -17,15 +17,15 @@
 <h4>Output:</h4>
 
    <ul>
-    <li>Transmission Time:</li>
+    <li>Total second:</li>
     </ul>
 
 <h4>Operations:</h4>
 
 <ul>>
-   <li>Calculate Transmission Time:</li> 
-   <pre> Formula: transmissionTime = totalCharacters / transmissionRate </pre>
-         Convert Transmission Time to days, Hours, Minutes, and Seconds:
+   <li>Calculate Total second:</li> 
+   <pre> Formula: total second= totalCharacters / transmissionRate </pre>
+         Convert total second to days, Hours, Minutes, and Seconds:
   <li>calculate days:<pre>days=total_second/(24*3600)</pre></li>
   <li>update:<pre>total_seconds%=(24*3600)</pre></li>
     <li>Calculate hours: <pre>hours = total_seconds / 3600</pre> </li>
@@ -131,7 +131,7 @@ BEGIN
    minutes = (transmissionTime % 3600) / 60
    seconds = transmissionTime % 60
 
-  output "Time to send the file: " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds."
+  output "Time to send the file:"+ days +" days," + hours + " hours, " + minutes + " minutes, " + seconds + " seconds."
 END
 </pre>
 
