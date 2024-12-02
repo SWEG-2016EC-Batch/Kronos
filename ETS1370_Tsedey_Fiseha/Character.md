@@ -27,9 +27,9 @@
    <pre> Formula: transmissionTime = totalCharacters / transmissionRate </pre>
          Convert Transmission Time to days, Hours, Minutes, and Seconds:
   <li>calculate days:<pre>days=total_second/(24*3600)</pre></li>
-  <li>calculate:<pre>total_seconds%=(24*3600)</pre></li>
+  <li>update:<pre>total_seconds%=(24*3600)</pre></li>
     <li>Calculate hours: <pre>hours = total_seconds / 3600</pre> </li>
-  <li>calculate:<pre>total_second%=3600</pre></li>
+  <li>update:<pre>total_second%=3600</pre></li>
     <li>Calculate minutes: <pre>minutes = total_seconds  / 60</pre> </li>
     <li>Calculate seconds: <pre>seconds = total_seconds % 60</pre> </li>
     <li>Display the calculated transmission time.</li>
