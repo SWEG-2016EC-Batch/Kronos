@@ -1,44 +1,50 @@
-Algorithm to Calculate Transmission Time
+## Algorithm for the mile calculator
 
-1.Input:
+1. Input:
 
--File size in bytes.
+    - the fuel tank capacity in gallons.
 
--Transmission rate in bytes per second.
+    - the miles per gallon .
 
-2.Process:
+2. Process:
 
-Calculate Total Seconds:
+    - mile = fuel_in_gallon × miles_per_gallons
+   
+3. Output:
 
--Total Seconds = file size/ transmition rate
+    - the total mile
 
-Calculate Days:
+## Algorithm Design
 
--days = Total seconde /(24*3600)
+  ## pseudocode
 
-Calculate Hours:
+Step 1: Start
 
--hours = remaining seconds/3600
+Step 2: Initialize Variables
+        
+        2.1. Declare variables fuel_in_gallon, miles_per_gallons, and mile.
 
-Calculate Minutes:
+Step 3: Input Data
 
--minutes = remaining seconds/60
+        3.1. Prompt the user to enter the fuel in gallons.
+        
+        3.2. Store the input value in fuel_in_gallon.
+        
+        3.3. Prompt the user to enter the miles per gallon.
+        
+        3.4. Store the input value in miles_per_gallons.
 
-remaining Seconds = remaining Seconds modulus(%) 60
+Step 4: Calculate Distance
+        
+        4.1. Calculate the distance the automobile can travel without refueling:
+        
+        - mile = fuel_in_gallon * miles_per_gallons.
 
-Remaining Seconds:
+Step 5: Output Result
+        
+        5.1. Display the result: "The automobile can be driven mile miles without refueling."
 
--Remaining Seconds = Remaining Seconds
-
-3.Output:
-
--Days
-
--Hours
-
--Minutes
-
--Seconds
+Step 6: End
 
 # Flowchart for Serial Transmission Time Calculation
 ```mermaid
