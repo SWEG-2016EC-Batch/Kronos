@@ -1,13 +1,46 @@
-Input: x and y
-opertation: x the power of y
-output: x^y
+## Algorithm
+1. Input:
 
-Algorithm
-step1: start the program
-step2: read the input x and y
-step3:calculate x the power of y by pow(x,y)function
-step4: print or display x^y
-step5:Terminate the program
+     - Prompt the user to enter the base number.
+     - Prompt the user to enter the exponent.
+2. Process:
+   
+     - result = base^exponent
+
+3. Output:
+
+     - The result is {result}
+
+## Algorithm Design
+  Pseudocode
+   
+   
+Step 1: Start
+
+Step 2: Initialize Variables
+     
+     2.1. x(base), y(exponent), and x_the_power_of_y.
+
+Step 3: Input Data
+
+     3.1. Prompt the user to enter x.
+     
+     3.2. Store the input value x.
+     
+     3.3. Prompt the user to enter y.
+     
+     3.4. Store the input value y.
+
+Step 4: Calculate the Result
+     
+     4.1. Use the formula result = pow(base, exponent) to calculate the value of x^y
+
+Step 5: Output Result
+     
+     5.1. Display the result: " x_the_power_of_y".
+
+
+Step 6: End
 
 # power Calculation and Evaluation Flowchart
 
