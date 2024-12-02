@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h1><b> Miles calculator </b></h1>
+  <h1><b> Fuel calculator </b></h1>
   
 <html>
 <body>
@@ -36,7 +36,7 @@ miles driven = fuel tank capacity * miles per gallon
 </body>
 </html>
 
-<h2>Pseudocode for Miles Calculation</h2>
+<h2>Pseudocode for Fuel  Calculation</h2>
 
 <pre>
 BEGIN
