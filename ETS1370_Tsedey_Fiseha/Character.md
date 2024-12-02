@@ -12,6 +12,7 @@
 
   <ul>
    <li> File Size: </li>
+    <li>transmission rate:</li>
    </ul>
 
 <h4>Output:</h4>
@@ -24,12 +25,14 @@
 
 <ul>>
    <li>Calculate Total second:</li> 
-   <pre> Formula: total second= totalCharacters / transmissionRate </pre>
+<pre>formula: totalCharacters = fileSize / bytesPerCharacter</pre>
+   <pre> Formula: total second= total character/ transmissionRate </pre>
          Convert total second to days, Hours, Minutes, and Seconds:
   <li>calculate days:<pre>days=total_second/(24*3600)</pre></li>
   <li>update:<pre>total_seconds%=(24*3600)</pre></li>
     <li>Calculate hours: <pre>hours = total_seconds / 3600</pre> </li>
-  <li>update:<pre>total_second%=3600</pre></li>
+  <li>update:
+  <pre>total_second%=3600</pre></li>
     <li>Calculate minutes: <pre>minutes = total_seconds  / 60</pre> </li>
     <li>Calculate seconds: <pre>seconds = total_seconds % 60</pre> </li>
     <li>Display the calculated transmission time.</li>
