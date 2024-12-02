@@ -64,7 +64,7 @@
 
     3.4.4. Else:
     
-    Output "Check your input".
+    Output "invalid".
     
     3.5. User Decision
     
