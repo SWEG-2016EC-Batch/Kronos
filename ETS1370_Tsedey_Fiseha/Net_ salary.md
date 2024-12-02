@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h1><b> Salary calculator </b></h1>
+  <h1><b> net_Salary calculator </b></h1>
   
 <html>
 <body>
@@ -12,8 +12,7 @@
 <h4>Input:</h4>
 
   <ul>
-    <li>First Name: The first name of the employee.</li>
-    <li>Last Name: The last name of the employee.</li>
+    <li> Name: The name of the employee.</li>
     <li>Weekly Working Hours</li>
     <li> Bonus Rate:</li>
     <li>Base Salary</li>
@@ -22,7 +21,7 @@
 <h4>Output:</h4>
 
 <ul>
-    <li>Full Name: The concatenated first and last name of the employee.</li>
+    <li>Name: The name of the employee.</li>
     <li>Bonus Payment:</li>
     <li>Gross Salary:</li>
     <li>Net Salary:</li>
@@ -31,7 +30,7 @@
 <h4>Operations:</h4>
 
 <ul>
-    <li>Read the first name and last name from the user.</li>
+    <li>Read the name from the user.</li>
     <li>Read the weekly working hours, the bonus rate and base salary from the user.</li>
     <li>Calculate Bonus Payment: <pre> bonus_payment = bonus_rate * working_hours</pre>  </li>
     <li>Calculate Gross Salary: <pre> gross_salary = base_salary + bonus_payment</pre></li>
