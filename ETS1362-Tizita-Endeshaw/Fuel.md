@@ -58,6 +58,6 @@ END
 <html>
   <h2> Flowchart of FUEL CALCULATOR </h2>
   <div align = "left">
-  <a href="https://1drv.ms/i/c/105b6da710b596d0/EcYGBBLhbC9Ctu7NyCoxNJIB5nqbtLa_O0GIjqP-3LnNCA?e=jesf0Q ">Click here to see the flowchart of the miles calculator </a>
+  <a href="https://1drv.ms/i/c/105b6da710b596d0/EcYGBBLhbC9Ctu7NyCoxNJIB5nqbtLa_O0GIjqP-3LnNCA?e=jesf0Q ">Click here to see the flowchart of the fuel  calculator </a>
     
 </html>
