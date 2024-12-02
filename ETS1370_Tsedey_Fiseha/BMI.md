@@ -40,7 +40,7 @@
      - If BMI > 24.9: Label as Overweight.
 4. Ask for User Consent:
    - Prompt the user to decide if they want to perform another calculation or terminate the program.
-   - If the user's choice is yes, continue the program.
+   - If the user's choice is y, continue the program.
    - Otherwise, terminate the program.
 </pre>
 </body>
