@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h1><b> File transmission calculator </b></h1>
+  <h1><b> character calculator </b></h1>
   
 <html>
 <body>
