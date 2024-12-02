@@ -2,17 +2,17 @@
 
 1. Input:
 
-    - the fuel tank capacity in gallons.
+    - the fuel tank capacity in gallon .
 
     - the miles per gallon .
 
 2. Process:
 
-    - mile = fuel_in_gallon × miles_per_gallons
+    - mile = fuel_tank_capacity in gallon × miles_per_gallons
    
 3. Output:
 
-    - the total mile
+    - miles_driven
 
 ## Algorithm Design
 
@@ -22,15 +22,15 @@ Step 1: Start
 
 Step 2: Initialize Variables
         
-        2.1. Declare variables fuel_in_gallon, miles_per_gallons, and mile.
+        2.1. Declare variables fuel_tank_capacity in gallon, miles_per_gallons, and miles_driven .
 
 Step 3: Input Data
 
-        3.1. Prompt the user to enter the fuel in gallons.
+        3.1. Prompt the user to enter the fuel_tank_capacity in gallon.
         
-        3.2. Store the input value in fuel_in_gallon.
+        3.2. Store the input value in fuel_tank_capacity in gallon.
         
-        3.3. Prompt the user to enter the miles per gallon.
+        3.3. Prompt the user to enter the miles_per_gallon.
         
         3.4. Store the input value in miles_per_gallons.
 
@@ -38,7 +38,7 @@ Step 4: Calculate Distance
         
         4.1. Calculate the distance the automobile can travel without refueling:
         
-        - mile = fuel_in_gallon * miles_per_gallons.
+        - miles_driven  =  fuel_tank_capacity  * miles_per_gallons.
 
 Step 5: Output Result
         
