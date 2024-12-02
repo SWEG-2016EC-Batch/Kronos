@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int main() {
-    float base_salary,bonus_rate,bonus,pension,gross_salary;
+    float base_salary,bonus_rate,bonus=0,pension,gross_salary;
     int working_hours;
     string name;
     
