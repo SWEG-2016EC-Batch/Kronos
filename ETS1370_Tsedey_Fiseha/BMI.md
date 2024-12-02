@@ -49,8 +49,8 @@
 <h2> Pseudocode for BMI Calculation </h2>
 <pre>
 BEGIN
-    set choice = "yes"
-    while choice == "yes" DO
+    set choice = "y"
+    while choice == "y" DO
         output "Enter the weight of a person in kilograms"
         input weight
         output "Enter the height of a person in meters"
