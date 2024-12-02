@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h1><b> Power calculator </b></h1>
+  <h1><b> Exponent calculator </b></h1>
   
 <html>
 <body>
@@ -30,7 +30,7 @@
 </body>
 </html>
   
-<h2>Pseudocode for Power Calculation</h2>
+<h2>Pseudocode for Exponent  Calculation</h2>
 
 <pre>
 BEGIN
@@ -52,5 +52,5 @@ END
 </body>
 </html>
 <h2> Flowchart for the power calculator </h2>
-<a href="https://1drv.ms/i/c/105b6da710b596d0/EdpQPfE9MZhEhleIaTiEJycBXw0wLZj9cmtT7aO1ipVHlA?e=plOSsD ">Click here to see the flowchart of the power calculator</a>
+<a href="https://1drv.ms/i/c/105b6da710b596d0/EdpQPfE9MZhEhleIaTiEJycBXw0wLZj9cmtT7aO1ipVHlA?e=plOSsD ">Click here to see the flowchart of the exponent  calculator</a>
 
