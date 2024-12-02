@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h1><b> File transmission calculator </b></h1>
+  <h1><b> File transfer Time  calculator </b></h1>
   
 <html>
 <body>
@@ -61,8 +61,8 @@ END
 </body>
 </html>
 <html>
-  <h2> Flowchart of BMI</h2>
+  <h2> Flowchart of FILE TRANSFER TIME </h2>
   <div align = "left">
-  <a href="https://1drv.ms/i/c/105b6da710b596d0/Eetr-h5dlClGuwt9jX3oWR0BXzxzlVcaNNUd62OHrro5YA?e=ZQijso ">Click here to see the flowchart of the file transmission calculator </a>
+  <a href="https://1drv.ms/i/c/105b6da710b596d0/Eetr-h5dlClGuwt9jX3oWR0BXzxzlVcaNNUd62OHrro5YA?e=ZQijso ">Click here to see the flowchart of the file transfer time calculator </a>
     
 </html>
