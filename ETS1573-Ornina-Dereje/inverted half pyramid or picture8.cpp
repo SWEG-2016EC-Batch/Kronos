@@ -1,8 +1,8 @@
 #include <iostream> using namespace std;
 int main() {
-for (int i=6;1>=1;i--){
+for (int i=6;i>=1;i--){
 
-for(int j=1;j<=i;i++){ 
+for(int j=1;j<=i;j++){ 
 cout<<"*";
 }
 
