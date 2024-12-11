@@ -1,4 +1,5 @@
-pseudocode
+pseudocode: Print 5x5 Grid
+
 step 1: Start
 
     • Begin the algorithm.
