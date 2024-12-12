@@ -45,4 +45,15 @@
 
 7. **Display Output:**
    - Print the net salary to the console.
+  
+     flowchart LR
+    A[Start] --> B{Read basic salary, worked hours, bonus rate}
+    B --> C{Calculate bonus}
+    C --> D{Calculate gross salary}
+    D --> E{Calculate pension}
+    E --> F{Calculate tax}
+    F --> G{Calculate net salary}
+    G --> H[Print net salary]
+    H --> I[End]
+
 
