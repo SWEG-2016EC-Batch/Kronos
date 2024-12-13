@@ -1,5 +1,4 @@
-▎Step-by-Step Algorithm:
-
+pseudocode
 1. Start 
 2. Declare Variables:
 
