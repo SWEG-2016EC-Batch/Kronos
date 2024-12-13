@@ -1,33 +1,28 @@
-**Pseudocode:**
+# Pseudocode for Printing Characters in a Grid
 
+## Input
+- No explicit input is required for this program.
 
-For each row from 1 to 4:
-For each column from 1 to 6:
-Print the current character with a space on both sides
-Increment the character
-Print a newline
+## Output
+- Print a grid of characters starting from 'A', with each row containing 6 characters.
 
-**Explanation:**
+## Operations
+BEGIN
 
-1. **Initialize Character:**
-   - Set the initial character to 'A'.
+    // Initialize the character variable to 'A'
+    SET character = 'A'
+    
+    // Start of the main program
+    FOR i FROM 1 TO 4 DO // Loop for 4 rows
+        // Inner loop to print 6 characters per row
+        FOR j FROM 1 TO 6 DO
+            PRINT " " + character + " " // Print the current character with leading and trailing spaces
+            INCREMENT character by 1 // Move to the next character in the ASCII table
+        END FOR
+        
+        PRINT a new line // Move to the next line after finishing the row
+    END FOR
 
-2. **Outer Loop:**
-   - Iterates 4 times, representing each row of the matrix.
+    RETURN 0 // End of the program
 
-3. **Inner Loop:**
-   - Iterates 6 times for each outer loop iteration, representing each column in a row.
-
-4. **Print Character:**
-   - Prints the current character with a space on both sides.
-   - Increments the character to the next alphabetical letter.
-
-5. **Newline:**
-   - After each inner loop completes, prints a newline character to move to the next row. 
-
-This will result in the following output:
-
-A  B  C  D  E  F
-G  H  I  J  K  L
-M  N  O  P  Q  R
-S  T  U  V  W  X
+END
