@@ -27,7 +27,7 @@ Print a newline
 
 This will result in the following output:
 
-
+ **Output:**
 -A B C D E F.
 -G H I J K L.
 -M N O P Q R.
