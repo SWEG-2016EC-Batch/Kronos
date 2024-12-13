@@ -83,7 +83,8 @@ END
 </body>
 </html>
 <h2>Flow chart</h2>
-mermaid..
+
+```mermaid
 graph TD;
     A([Start]) --> B[/Enter Test Score/]
     B --> C[/Enter Quiz Score/]
@@ -115,4 +116,4 @@ graph TD;
     U --> W
     V --> W
     W --> X([End])
-    
+  ```  
