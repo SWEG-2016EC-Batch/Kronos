@@ -1,26 +1,28 @@
 #include <iostream>
-#include <vector> 
+
 using namespace std;
 
 int main() {
-    int num;
-    vector<int> frequency(10, 0); 
-    cout << "Enter an integer: ";
-    cin >> num;
+    int number, digit;
+    int frequency[10] = {0};  
 
-    int temp = num; 
+    cout << "Enter a positive integer: ";
+    cin >> number;
 
-    while (temp != 0) {
-        int digit = temp % 10; 
-        frequency[digit]++;
-        temp /= 10;
+    
+    while (number != 0) {
+        digit = number % 10;   
+        frequency[digit]++;     
+        number /= 10;           
     }
 
-   
+
     cout << "Digit\tFrequency" << endl;
-    for (int i = 0; i < 10; ++i) {
-        cout << i << "\t" << frequency[i] << endl;
+    for (int i = 0; i < 10; i++) {
+        if (frequency[i] != 0) {  
+            cout << i << "\t" << frequency[i] << endl;
+        }
     }
 
-    EXIT_SUCCESS;
+    return 0;
 }
