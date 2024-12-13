@@ -35,10 +35,52 @@ Corresponding grade based on the total mark.
 </html>
 <h2>Flow chart</h2>
     
-    Z --> AH
-    X --> AH
-    V --> AH
-    T --> AH
-    AH --> AI([End])
-  ```
-  ```  
+  ```mermaid
+graph TD
+        A([Start]) --> B[Enter the number of people to calculate]
+B --> C[/Read the number of people/]
+C --> D[Initialize counter for people]
+D --> E[Enter test score from 0-15]
+E --> F[/Read test score/]
+F --> G[Enter quiz score from 0-5]
+G --> H[/Read quiz score/]
+H --> I[Enter assignment score from 0-10]
+I --> J[/Read assignment score/]
+J --> K[Enter project score from 0-20]
+K --> L[/Read project score/]
+L --> M[Enter final exam score from 0-50]
+M --> N[/Read final exam score/]
+N --> O[Check if all scores are within valid range]
+O -- Yes --> P[Calculate total mark]
+P --> Q[Check if mark is greater than or equal to 90]
+Q -- Yes --> R[Grade A+]
+Q -- No --> S[Check if mark is greater than or equal to 80]
+S -- Yes --> T[Grade A]
+S -- No --> U[Check if mark is greater than or equal to 75]
+U -- Yes --> V[Grade B+]
+U -- No --> W[Check if mark is greater than or equal to 60]
+W -- Yes --> X[Grade B]
+W -- No --> Y[Check if mark is greater than or equal to 55]
+Y -- Yes --> Z[Grade C+]
+Y -- No --> AA[Check if mark is greater than or equal to 45]
+AA -- Yes --> AB[Grade C]
+AA -- No --> AC[Check if mark is greater than or equal to 30]
+AC -- Yes --> AD[Grade D]
+AC -- No --> AE[Grade F]
+R --> AF[/Print grade/]
+T --> AF
+V --> AF
+X --> AF
+Z --> AF
+AB --> AF
+AD --> AF
+AE --> AF
+AF --> AG[Increment counter]
+AG --> AH[Check if counter is less than or equal to the number of people]
+AH -- Yes --> E
+AH -- No --> AI[/Print all grades and summary/]
+AI --> AJ([End])
+O -- No --> AK[/Print error/]
+AK --> AG
+```
+```
