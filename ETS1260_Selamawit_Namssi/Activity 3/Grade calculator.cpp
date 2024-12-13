@@ -1,47 +1,55 @@
 #include <iostream>
-
 using namespace std;
+int main(){
+    int number_of_people;
+    cout<<"Enter the number of person you want to calculate: ";
+    cin>>number_of_people;
+    for(int i=1;i<=number_of_people;i++){
+        double test,quiz,assignment,project,final_exam,mark;
+        cout << "\nPerson " << i << ":\n";
 
-int main() {
-    float test, quiz, project, assignment, finalExam;
+        cout << "Enter your test score (0-15): ";
+        cin >> test;
+        cout << "Enter your quiz score (0-5): ";
+        cin >> quiz;
+        cout << "Enter your assignment score (0-10): ";
+        cin >> assignment;
+        cout << "Enter your project score (0-20): ";
+        cin >> project;
+        cout << "Enter your final exam score (0-50): ";
+        cin >> final_exam;
 
-    cout << "Enter the score for Test : "<<endl;
-    cin >> test;
+    if((test ==0 && test==20) || (quiz==0 && quiz ==5) || (assignment==0 && assignment == 10) || (project==0 && project ==20)  || (final_exam==0 && final_exam ==50)){
+        mark = test + quiz + assignment + project + final_exam;
+        cout<<"Your mark from out of 100 is "<<mark<<endl;
+    if (mark >=90){
+        cout<<"Grade: A+"<<endl;
+            }
+    else if (mark >=80){
+        cout<<"Grade: A"<<endl;
+            }
+    else if (mark >=75){
+        cout<<"Grade: B+"<<endl;
+            }
+    else if (mark >=60){
+        cout<<"Grade: B"<<endl;
+            }
+    else if (mark >=55){
+        cout<<"Grade: c+"<<endl;
+            }
+    else if (mark >=45){
+        cout<<"Grade: c"<<endl;
+            }
+    else if (mark >=30){
+        cout<<"Grade: D"<<endl;
+            }
+    else{
+        cout<<"Grade: F"<<endl;
+            }
+    
 
-    cout << "Enter the score for Quiz : "<<endl;
-    cin >> quiz;
-
-    cout << "Enter the score for Project : "<<endl;
-    cin >> project;
-
-    cout << "Enter the score for Assignment : "<<endl;
-    cin >> assignment;
-
-    cout << "Enter the score for Final Exam : "<<endl;
-    cin >> finalExam;
-
-    float totalMark = (test * 0.15) + (quiz * 0.05) + (project * 0.20) + (assignment * 0.10) + (finalExam * 0.50);
-
-    cout << "Total Marks: " << totalMark << endl;
-
-    if (totalMark >= 90) {
-        cout << " A+" << endl;
-    } else if (totalMark >= 80) {
-        cout << " A" << endl;
-    } else if (totalMark >= 75) {
-        cout << " B+" << endl;
-    } else if (totalMark >= 60) {
-        cout << " B" << endl;
-    } else if (totalMark >= 55) {
-        cout << " C+" << endl;
-    } else if (totalMark >= 45) {
-        cout << " C" << endl;
-    } else if (totalMark >= 30) {
-        cout << " D" << endl;
-    } else {
-        cout << " F" << endl;
+        }
+        cout<<endl;
     }
-
     return 0;
 }
-
