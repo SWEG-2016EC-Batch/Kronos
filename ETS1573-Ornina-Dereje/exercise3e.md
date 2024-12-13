@@ -1,31 +1,32 @@
 pseudocode
-Step 1: Start
 
-    • The program begins execution.
+1. Start
 
-Step 2: Variable Declaration
+       • The program begins execution.
 
-    • Several integer variables are declared:
+2. Variable Declaration
 
-    • number: to store the user input.
+       • Several integer variables are declared:
 
-    • firstDigit: to store the first digit of the number.
+       • number: to store the user input.
 
-    • lastDigit: to store the last digit of the number.
+       • firstDigit: to store the first digit of the number.
 
-    • numDigits: to count the total number of digits in the number.
+       • lastDigit: to store the last digit of the number.
 
-    • swappedNumber: to store the final result after swapping the digits.
+       • numDigits: to count the total number of digits in the number.
 
-Step 3: User Input
+       • swappedNumber: to store the final result after swapping the digits.
 
-    • The program prompts the user to enter an integer and reads it into the variable number.
+3. User Input
 
-Step 4: Calculate Absolute Value
+       • The program prompts the user to enter an integer and reads it into the variable number.
 
-    • The absolute value of number is calculated and stored in absNumber using abs(number). This is done to simplify the extraction of digits, especially for negative numbers.
+4. Calculate Absolute Value
 
-Step 5: Find Last Digit
+       • The absolute value of number is calculated and stored in absNumber using abs(number). This is done to simplify the extraction of digits, especially for negative numbers.
+
+5. Find Last Digit
 
   • The last digit of the absolute number is found using:
   
@@ -34,23 +35,23 @@ Step 5: Find Last Digit
 
 • This operation gives the remainder when absNumber is divided by 10, which is effectively the last digit.
 
-Step 6: Find First Digit and Count Digits
+6. Find First Digit and Count Digits
 
-    • The first digit is initialized to absNumber.
+       • The first digit is initialized to absNumber.
 
-    • A loop is used to repeatedly divide firstDigit by 10 until it is less than 10, effectively isolating the first digit. Each division indicates that one digit has been removed, so we also increment numDigits to count how many times this division occurs.
+       • A loop is used to repeatedly divide firstDigit by 10 until it is less than 10, effectively isolating the first digit. Each division indicates that one digit has been removed, so we also increment numDigits to count how many times this division occurs.
   
-Step 6.1: Counting Digits
+6.1. Counting Digits
 
     • After exiting the loop, numDigits is incremented by one to account for the first digit that remains when firstDigit becomes less than 10.
 
-Step 7: Prepare Swapped Number
+ 7. Prepare Swapped Number
 
-    • The variable swappedNumber is initialized with absNumber.
+        • The variable swappedNumber is initialized with absNumber.
 
-    • The first digit is removed from its original position:
+        • The first digit is removed from its original position:
   
-     swappedNumber -= firstDigit * pow(10, numDigits - 1);
+        swappedNumber -= firstDigit * pow(10, numDigits - 1);
   
 
 • The last digit is removed:
@@ -68,19 +69,19 @@ Step 7: Prepare Swapped Number
     swappedNumber += lastDigit * pow(10, numDigits - 1);
   
 
-▎Step 8: Handle Negative Input
+8.Handle Negative Input
 
 
     swappedNumber = -swappedNumber;
 
 
 
-Step 9: Output Result
+ 9. Output Result
 
-    • Finally, the program outputs the result, displaying the new number after swapping the first and last digits.
+        • Finally, the program outputs the result, displaying the new number after swapping the first and last digits.
 
-Step 10: End
+ 10. End
 
     • The program terminates.
 
-▎Pseudocode Rep
+
