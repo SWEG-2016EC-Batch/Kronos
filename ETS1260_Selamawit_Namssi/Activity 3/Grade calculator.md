@@ -34,49 +34,11 @@ Corresponding grade based on the total mark.
 </body>
 </html>
 <h2>Flow chart</h2>
-
-```mermaid
-graph TD;
-    A([Start]) --> B[Print "Enter number of people"]
-    B --> C[Input number_of_people]
-    C --> D[For i = 1 to number_of_people]
-    D --> E[Print "Person i:"]
-    E --> F[Print "Enter test score"]
-    F --> G[Input test]
-    G --> H[Print "Enter quiz score"]
-    H --> I[Input quiz]
-    I --> J[Print "Enter assignment score"]
-    J --> K[Input assignment]
-    K --> L[Print "Enter project score"]
-    L --> M[Input project]
-    M --> N[Print "Enter final exam score"]
-    N --> O[Input final_exam]
-    O --> P{Any score is 0?}
-    P -- Yes --> Q[Calculate mark = test + quiz + assignment + project + final_exam]
-    Q --> R[Print "Your mark from out of 100 is mark"]
-    R --> S{mark >= 90?}
-    S -- Yes --> T[Print "Grade: A+"]
-    S -- No --> U{mark >= 80?}
-    U -- Yes --> V[Print "Grade: A"]
-    U -- No --> W{mark >= 75?}
-    W -- Yes --> X[Print "Grade: B+"]
-    W -- No --> Y{mark >= 60?}
-    Y -- Yes --> Z[Print "Grade: B"]
-    Y -- No --> AA{mark >= 55?}
-    AA -- Yes --> AB[Print "Grade: C+"]
-    AA -- No --> AC{mark >= 45?}
-    AC -- Yes --> AD[Print "Grade: C"]
-    AC -- No --> AE{mark >= 30?}
-    AE -- Yes --> AF[Print "Grade: D"]
-    AE -- No --> AG[Print "Grade: F"]
-    P -- No --> AH[End loop]
-    AG --> AH
-    AF --> AH
-    AD --> AH
-    AB --> AH
+    
     Z --> AH
     X --> AH
     V --> AH
     T --> AH
     AH --> AI([End])
+  ```
   ```  
