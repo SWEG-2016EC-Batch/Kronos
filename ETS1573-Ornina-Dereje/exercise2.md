@@ -72,8 +72,7 @@ pseudocode
 
 10. Determine Grade Based on Total Mark:
 
-    • Use a series of conditional statements (if, else if) to determine the letter grade based on the total mark:
-
+   
         • If total_mark is between 90 and 100, print "your grade is A+".
 
         • If total_mark is between 80 and 89.99, print "your grade is A".
