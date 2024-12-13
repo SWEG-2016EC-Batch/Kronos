@@ -4,14 +4,12 @@ int main(){
 
 // declare and accept gross salary,tax rate,overtime bonus rate,work hour,extra work hour, bonus rate, pension, tax, bonus, net income and employee name 
 
-double gross_salary, work_hour,extra_work_hour,tax_rate, bonus_rate, pension, tax, bonus, over_time_bonus_rate, net_income, income_salary;
+double gross_salary, work_hour,extra_work_hour,tax_rate, pension, tax, bonus, over_time_bonus_rate, net_income, income_salary;
 cout<<"please enter employee name: ";
 char employee_name [40];
 cin>> employee_name;
 cout<<"please enter employee's base salary in birr: ";
 cin>> gross_salary;
-cout<<"please enter employee's bonus rate: ";
-cin>> bonus_rate;
 
 
 
@@ -24,7 +22,7 @@ if(work_hour > 40)
 {
     
 
-	cout<<"please enter overtime bonus per hour: ";
+	cout<<"please enter overtime bonus rate per hour: ";
 	cin>>over_time_bonus_rate;
 	extra_work_hour=work_hour-40;
 } 
@@ -60,8 +58,9 @@ else if(gross_salary >= 1200 && gross_salary <= 2000)
 
 if (work_hour > 40)
 {
+
 	
-bonus = extra_work_hour * bonus_rate;
+bonus = extra_work_hour * over_time_bonus_rate;
 }
 else {
     bonus=0;
@@ -70,7 +69,7 @@ else {
 income_salary = bonus + gross_salary;
 pension = gross_salary * 0.07;
 tax = income_salary * tax_rate;
-net_income = income_salary - ( tax+ pension);
+net_income = income_salary - pension - tax;
 
 //print the results
 
