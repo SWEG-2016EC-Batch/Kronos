@@ -7,7 +7,7 @@ pseudocode
 
        • Declare an integer variable number to store the user input.
 
-       • Declare an integer variable numdigits and initialize it to 0 to count the number of digits in number.
+       • Declare an integer variable numdigits.
 
 3. User Prompt:
 
