@@ -36,50 +36,6 @@
         <li>Print the total marks.</li>
         <li>Determine and print the corresponding letter grade based on the total marks.</li>
     </ol>
-
-   <h2>Pseudocode:</h2>
-    <pre>
-      
-BEGIN
-    DECLARE test, quiz, project, assignment, finalExam AS FLOAT
-    PRINT "Enter the score for Test:"
-    INPUT test
-
-  PRINT "Enter the score for Quiz:"
-    INPUT quiz
-
-  PRINT "Enter the score for Project:"
-    INPUT project
-
-  PRINT "Enter the score for Assignment:"
-    INPUT assignment
-
-  PRINT "Enter the score for Final Exam:"
-    INPUT finalExam
-
-  totalMark = (test * 0.15) + (quiz * 0.05) + (project * 0.20) + (assignment * 0.10) + (finalExam * 0.50)
-
-  PRINT "Total Marks: ", totalMark
-
-  IF totalMark >= 90 THEN
-        PRINT "A+"
-    ELSE IF totalMark >= 80 THEN
-        PRINT "A"
-    ELSE IF totalMark >= 75 THEN
-        PRINT "B+"
-    ELSE IF totalMark >= 60 THEN
-        PRINT "B"
-    ELSE IF totalMark >= 55 THEN
-        PRINT "C+"
-    ELSE IF totalMark >= 45 THEN
-        PRINT "C"
-    ELSE IF totalMark >= 30 THEN
-        PRINT "D"
-    ELSE 
-        PRINT "F"
-    END IF
-END
-    </pre>
 </body>
 </html>
 <h2>Flow chart</h2>
