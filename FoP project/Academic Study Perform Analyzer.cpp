@@ -8,11 +8,11 @@
 using namespace std;
 
 int main() {
-    // Define constants for the maximum number of students and number of days in the week
+   
     const int max_students = 100;  
     const int days = 7;  
 
-    // Arrays to store student information and their study hours
+   
     string student_names[max_students];  
     string student_ids[max_students];  
     int study_hours[max_students][days] = {0};  
@@ -20,7 +20,7 @@ int main() {
     double daily_averages[days] = {0.0};  
     int num_students = 0;  
 
-    // Input: Number of students
+    
     cout << "Enter the number of students (max " << max_students << "): ";
     cin >> num_students;
 
@@ -29,9 +29,9 @@ int main() {
         return 1;
     }
 
-    // Collect student data
+    
     for (int i = 0; i < num_students; i++) {
-        // Student name
+        
         while (true) {
             cout << "Enter name of student " << (i + 1) << ": ";
             cin >> student_names[i];
@@ -40,7 +40,7 @@ int main() {
             cout << "Invalid name. Please use alphabetic characters only." << endl;
         }
 
-        // Student ID
+        
         while (true) {
             cout << "Enter 4-digit ID: ";
             cin >> student_ids[i];
@@ -59,7 +59,7 @@ int main() {
             cout << "Invalid ID. Please enter a 4-digit number." << endl;
         }
 
-        // Study hours
+        
         cout << "Enter daily study hours for " << student_names[i] << " (7 days): ";
         for (int j = 0; j < days; j++) {
             while (true) {
@@ -76,7 +76,7 @@ int main() {
         }
     }
 
-    // Calculate daily averages
+    
     for (int j = 0; j < days; j++) {
         daily_averages[j] /= num_students;
     }
@@ -96,13 +96,13 @@ int main() {
         cin >> choice;
 
         if (choice == 1) {
-            // Add student
+            
             if (num_students >= max_students) {
                 cout << "Maximum number of students reached!" << endl;
                 continue;
             }
 
-            // Add details
+           
             cout << "\n--- Adding Student " << (num_students + 1) << " ---\n";
             while (true) {
                 cout << "Enter name: ";
@@ -254,7 +254,7 @@ int main() {
             }
 
             if (index_to_search != -1) {
-                // Print student's details
+               
                 cout << "\nStudent Found:\n";
                 cout << "Name: " << student_names[index_to_search] << "\n";
                 cout << "ID: " << student_ids[index_to_search] << "\n";
@@ -267,7 +267,7 @@ int main() {
             }
         } 
         else if (choice == 5) {
-            // Print all records
+            
             cout << "\n---- Student Records ----\n";
             for (int i = 0; i < num_students; i++) {
                 cout << "\nStudent Name: " << student_names[i]
