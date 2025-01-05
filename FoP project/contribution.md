@@ -13,4 +13,7 @@
   - Conducted thorough testing of the code.
 
 - **Tsedey Fiseha and Ornina Dereje:**
+  - WROTE THE CODE
   - Focused on debugging the code to ensure functionality.
+  - ADDED NEW FEATURES
+    
