@@ -8,37 +8,37 @@
 using namespace std;
 
 int main() {
-    const int max_students = 100; // Maximum number of students that can be stored
-    const int days = 7;          // Number of days to track study hours
+    const int max_students = 100; 
+    const int days = 7;          
 
-    // Arrays to store student data
-    string student_names[max_students]; // Student names
-    string student_ids[max_students];   // Student IDs
-    int study_hours[max_students][days] = {0}; // Study hours per day for each student
-    int total_study_hours[max_students] = {0}; // Total study hours for each student
-    double daily_averages[days] = {0.0};       // Average study hours per day
-    int num_students = 0;                     // Current number of students
-
+    
+    string student_names[max_students]; 
+    string student_ids[max_students];   
+    int study_hours[max_students][days] = {0}; 
+    int total_study_hours[max_students] = {0}; 
+    double daily_averages[days] = {0.0};       
+    int num_students = 0;   
+    
     // Welcome message and introduction
     cout << "\n";
     cout << " \t \t  WELCOME     \n";
     cout << "Track and manage students' daily study hours!\n";
     cout << "==============================================\n";
 
-    // Input: Number of students
+    
     cout << "Enter the number of students (max " << max_students << "): ";
     cin >> num_students;
-    cin.ignore(); // Clear input buffer before reading names
+    cin.ignore(); 
 
-    // Validate the number of students
+    
     if (num_students < 1 || num_students > max_students) {
         cout << "Invalid number of students." << endl;
         return 1;
     }
 
-    // Collect data for each student
+   
     for (int i = 0; i < num_students; i++) {
-        // Input: Student name (with validation for alphabets and spaces only)
+        
         while (true) {
             cout << "Enter full name of student " << (i + 1) << ": ";
             getline(cin, student_names[i]);
@@ -47,7 +47,7 @@ int main() {
                 return isalpha(c) || isspace(c); // Check if character is alphabetic or space
             });
 
-            // Ensure the name is valid and unique
+            
             if (valid_name && find(student_names, student_names + i, student_names[i]) == student_names + i) {
                 break;
             }
@@ -59,7 +59,7 @@ int main() {
             }
         }
 
-        // Input: Student ID (must be a 4-digit number)
+        
         while (true) {
             cout << "Enter 4-digit ID: ";
             cin >> student_ids[i];
@@ -69,30 +69,30 @@ int main() {
             cout << "Invalid ID. Please enter a 4-digit number." << endl;
         }
 
-        // Input: Daily study hours for the student
+        
         cout << "Enter daily study hours for " << student_names[i] << " (7 days): ";
         for (int j = 0; j < days; j++) {
             while (true) {
                 cout << "Day " << (j + 1) << ": ";
                 cin >> study_hours[i][j];
                 if (study_hours[i][j] >= 0 && study_hours[i][j] <= 24) {
-                    total_study_hours[i] += study_hours[i][j]; // Accumulate total study hours for the student
-                    daily_averages[j] += study_hours[i][j];   // Accumulate daily totals for averages
+                    total_study_hours[i] += study_hours[i][j]; 
+                    daily_averages[j] += study_hours[i][j];   
                     break;
                 } else {
                     cout << "Invalid input. Please enter a number between 0 and 24." << endl;
                 }
             }
         }
-        cin.ignore(); // Clear input buffer before the next iteration
+        cin.ignore(); 
     }
 
-    // Calculate daily averages
+   
     for (int j = 0; j < days; j++) {
         daily_averages[j] /= num_students;
     }
 
-    int choice; // Variable for menu choice
+    int choice; 
     while (true) {
         // Display menu options
         cout << "\n---- Menu ----\n";
@@ -106,7 +106,7 @@ int main() {
         cout << "Enter your choice: ";
         cin >> choice;
 
-        // Handle menu choices
+       
         if (choice == 1) {
             // Add a new student
             if (num_students >= max_students) {
@@ -114,8 +114,8 @@ int main() {
                 continue;
             }
 
-            // Input: Add new student details (similar logic as above)
-            cin.ignore(); // Clear input buffer
+           
+            cin.ignore(); 
             cout << "\n--- Adding Student " << (num_students + 1) << " ---\n";
 
             while (true) {
@@ -155,7 +155,7 @@ int main() {
                 }
             }
 
-            num_students++; // Increment student count
+            num_students++; 
         } else if (choice == 2) {
             // Delete a student by ID
             string search_id;
@@ -165,7 +165,7 @@ int main() {
             bool found = false;
             for (int i = 0; i < num_students; i++) {
                 if (student_ids[i] == search_id) {
-                    // Shift all records after the deleted student to fill the gap
+                   
                     for (int j = i; j < num_students - 1; j++) {
                         student_names[j] = student_names[j + 1];
                         student_ids[j] = student_ids[j + 1];
@@ -174,7 +174,7 @@ int main() {
                         }
                         total_study_hours[j] = total_study_hours[j + 1];
                     }
-                    num_students--; // Decrement student count
+                    num_students--; 
                     cout << "Student deleted successfully.\n";
                     found = true;
                     break;
@@ -192,7 +192,7 @@ int main() {
             bool found = false;
             for (int i = 0; i < num_students; i++) {
                 if (student_ids[i] == search_id) {
-                    cin.ignore(); // Clear input buffer
+                    cin.ignore(); 
                     cout << "Editing " << student_names[i] << " (" << student_ids[i] << ").\n";
 
                     cout << "Enter new full name: ";
@@ -275,7 +275,7 @@ int main() {
             }
             cout << "Students sorted by ID.\n";
         } else if (choice == 7) {
-            // Exit the program
+           
             cout << "Exiting the program. Goodbye!\n";
             break;
         } else {
