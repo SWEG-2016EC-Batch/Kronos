@@ -8,82 +8,93 @@
 using namespace std;
 
 int main() {
-   
-    const int max_students = 100;  
-    const int days = 7;  
+    const int max_students = 100; // Maximum number of students that can be stored
+    const int days = 7;          // Number of days to track study hours
 
-   
-    string student_names[max_students];  
-    string student_ids[max_students];  
-    int study_hours[max_students][days] = {0};  
-    int total_study_hours[max_students] = {0};  
-    double daily_averages[days] = {0.0};  
-    int num_students = 0;  
+    // Arrays to store student data
+    string student_names[max_students]; // Student names
+    string student_ids[max_students];   // Student IDs
+    int study_hours[max_students][days] = {0}; // Study hours per day for each student
+    int total_study_hours[max_students] = {0}; // Total study hours for each student
+    double daily_averages[days] = {0.0};       // Average study hours per day
+    int num_students = 0;                     // Current number of students
 
-    
+    // Welcome message and introduction
+    cout << "\n";
+    cout << " \t \t  WELCOME     \n";
+    cout << "Track and manage students' daily study hours!\n";
+    cout << "==============================================\n";
+
+    // Input: Number of students
     cout << "Enter the number of students (max " << max_students << "): ";
     cin >> num_students;
+    cin.ignore(); // Clear input buffer before reading names
 
+    // Validate the number of students
     if (num_students < 1 || num_students > max_students) {
         cout << "Invalid number of students." << endl;
         return 1;
     }
 
-    
+    // Collect data for each student
     for (int i = 0; i < num_students; i++) {
-        
+        // Input: Student name (with validation for alphabets and spaces only)
         while (true) {
-            cout << "Enter name of student " << (i + 1) << ": ";
-            cin >> student_names[i];
-            bool valid_name = all_of(student_names[i].begin(), student_names[i].end(), ::isalpha);
-            if (valid_name) break;
-            cout << "Invalid name. Please use alphabetic characters only." << endl;
+            cout << "Enter full name of student " << (i + 1) << ": ";
+            getline(cin, student_names[i]);
+
+            bool valid_name = all_of(student_names[i].begin(), student_names[i].end(), [](char c) {
+                return isalpha(c) || isspace(c); // Check if character is alphabetic or space
+            });
+
+            // Ensure the name is valid and unique
+            if (valid_name && find(student_names, student_names + i, student_names[i]) == student_names + i) {
+                break;
+            }
+
+            if (!valid_name) {
+                cout << "Invalid name. Please use alphabetic characters and spaces only." << endl;
+            } else {
+                cout << "Duplicate name. Please enter a unique name." << endl;
+            }
         }
 
-        
+        // Input: Student ID (must be a 4-digit number)
         while (true) {
             cout << "Enter 4-digit ID: ";
             cin >> student_ids[i];
             if (student_ids[i].length() == 4 && all_of(student_ids[i].begin(), student_ids[i].end(), ::isdigit)) {
-                // Check for uniqueness
-                bool unique = true;
-                for (int j = 0; j < i; j++) {
-                    if (student_ids[j] == student_ids[i]) {
-                        unique = false;
-                        break;
-                    }
-                }
-                if (unique) break;
-                else cout << "ID already exists. Please enter a unique 4-digit ID." << endl;
+                break;
             }
             cout << "Invalid ID. Please enter a 4-digit number." << endl;
         }
 
-        
+        // Input: Daily study hours for the student
         cout << "Enter daily study hours for " << student_names[i] << " (7 days): ";
         for (int j = 0; j < days; j++) {
             while (true) {
                 cout << "Day " << (j + 1) << ": ";
                 cin >> study_hours[i][j];
-                if (study_hours[i][j] >= 0) {
-                    total_study_hours[i] += study_hours[i][j];
-                    daily_averages[j] += study_hours[i][j];
+                if (study_hours[i][j] >= 0 && study_hours[i][j] <= 24) {
+                    total_study_hours[i] += study_hours[i][j]; // Accumulate total study hours for the student
+                    daily_averages[j] += study_hours[i][j];   // Accumulate daily totals for averages
                     break;
                 } else {
-                    cout << "Please enter a non-negative number." << endl;
+                    cout << "Invalid input. Please enter a number between 0 and 24." << endl;
                 }
             }
         }
+        cin.ignore(); // Clear input buffer before the next iteration
     }
 
-    
+    // Calculate daily averages
     for (int j = 0; j < days; j++) {
         daily_averages[j] /= num_students;
     }
 
-    // Main menu
-    int choice;
+    int choice; // Variable for menu choice
     while (true) {
+        // Display menu options
         cout << "\n---- Menu ----\n";
         cout << "1. Add student\n";
         cout << "2. Delete student\n";
@@ -95,36 +106,36 @@ int main() {
         cout << "Enter your choice: ";
         cin >> choice;
 
+        // Handle menu choices
         if (choice == 1) {
-            
+            // Add a new student
             if (num_students >= max_students) {
                 cout << "Maximum number of students reached!" << endl;
                 continue;
             }
 
-           
+            // Input: Add new student details (similar logic as above)
+            cin.ignore(); // Clear input buffer
             cout << "\n--- Adding Student " << (num_students + 1) << " ---\n";
+
             while (true) {
-                cout << "Enter name: ";
-                cin >> student_names[num_students];
+                cout << "Enter full name: ";
+                getline(cin, student_names[num_students]);
 
+                if (all_of(student_names[num_students].begin(), student_names[num_students].end(), [](char c) {
+                        return isalpha(c) || isspace(c);
+                    }) &&
+                    find(student_names, student_names + num_students, student_names[num_students]) == student_names + num_students) {
+                    break;
+                }
+                cout << "Invalid or duplicate name. Please enter a valid, unique name." << endl;
+            }
 
-                if (all_of(student_names[num_students].begin(), student_names[num_students].end(), ::isalpha)) break;
-                cout << "Invalid name. Please use alphabetic characters only." << endl;
-            }while (true) {
+            while (true) {
                 cout << "Enter 4-digit ID: ";
                 cin >> student_ids[num_students];
                 if (student_ids[num_students].length() == 4 && all_of(student_ids[num_students].begin(), student_ids[num_students].end(), ::isdigit)) {
-                    // Check for uniqueness
-                    bool unique = true;
-                    for (int j = 0; j < num_students; j++) {
-                        if (student_ids[j] == student_ids[num_students]) {
-                            unique = false;
-                            break;
-                        }
-                    }
-                    if (unique) break;
-                    else cout << "ID already exists. Please enter a unique 4-digit ID." << endl;
+                    break;
                 }
                 cout << "Invalid ID. Please enter a 4-digit number." << endl;
             }
@@ -134,175 +145,141 @@ int main() {
                 while (true) {
                     cout << "Day " << (j + 1) << ": ";
                     cin >> study_hours[num_students][j];
-                    if (study_hours[num_students][j] >= 0) {
+                    if (study_hours[num_students][j] >= 0 && study_hours[num_students][j] <= 24) {
                         total_study_hours[num_students] += study_hours[num_students][j];
                         daily_averages[j] += study_hours[num_students][j];
                         break;
                     } else {
-                        cout << "Please enter a non-negative number." << endl;
+                        cout << "Invalid input. Please enter a number between 0 and 24." << endl;
                     }
                 }
             }
-            num_students++;
-        } 
-        else if (choice == 2) {
-            // Delete student
-            string id_to_delete;
-            cout << "Enter the ID of the student to delete: ";
-            cin >> id_to_delete;
 
-            int index_to_delete = -1;
+            num_students++; // Increment student count
+        } else if (choice == 2) {
+            // Delete a student by ID
+            string search_id;
+            cout << "Enter 4-digit ID of the student to delete: ";
+            cin >> search_id;
+
+            bool found = false;
             for (int i = 0; i < num_students; i++) {
-                if (student_ids[i] == id_to_delete) {
-                    index_to_delete = i;
+                if (student_ids[i] == search_id) {
+                    // Shift all records after the deleted student to fill the gap
+                    for (int j = i; j < num_students - 1; j++) {
+                        student_names[j] = student_names[j + 1];
+                        student_ids[j] = student_ids[j + 1];
+                        for (int k = 0; k < days; k++) {
+                            study_hours[j][k] = study_hours[j + 1][k];
+                        }
+                        total_study_hours[j] = total_study_hours[j + 1];
+                    }
+                    num_students--; // Decrement student count
+                    cout << "Student deleted successfully.\n";
+                    found = true;
                     break;
                 }
             }
+            if (!found) {
+                cout << "Student not found.\n";
+            }
+        } else if (choice == 3) {
+            // Edit student details by ID
+            string search_id;
+            cout << "Enter 4-digit ID of the student to edit: ";
+            cin >> search_id;
 
-            if (index_to_delete != -1) {
-                // Shift students up to fill the gap
-                for (int i = index_to_delete; i < num_students - 1; i++) {
-                    student_names[i] = student_names[i + 1];
-                    student_ids[i] = student_ids[i + 1];
-                    total_study_hours[i] = total_study_hours[i + 1];
+            bool found = false;
+            for (int i = 0; i < num_students; i++) {
+                if (student_ids[i] == search_id) {
+                    cin.ignore(); // Clear input buffer
+                    cout << "Editing " << student_names[i] << " (" << student_ids[i] << ").\n";
+
+                    cout << "Enter new full name: ";
+                    getline(cin, student_names[i]);
+
+                    cout << "Enter new daily study hours (7 days):\n";
+                    total_study_hours[i] = 0; // Reset total study hours
                     for (int j = 0; j < days; j++) {
-                        study_hours[i][j] = study_hours[i + 1][j];
-                    }
-                }
-                num_students--;
-                cout << "Student with ID " << id_to_delete << " has been deleted." << endl;
-            } else {
-                cout << "No student found with ID " << id_to_delete << "." << endl;
-            }
-        } 
-        else if (choice == 3) {
-            // Edit student
-            string id_to_edit;
-            cout << "Enter the ID of the student to edit: ";
-            cin >> id_to_edit;
-
-            int index_to_edit = -1;
-            for (int i = 0; i < num_students; i++) {
-                if (student_ids[i] == id_to_edit) {
-                    index_to_edit = i;
-                    break;
-                }
-            }
-
-            if (index_to_edit != -1) {
-                // Edit details
-                while (true) {
-                    cout << "Enter new name: ";
-                    cin >> student_names[index_to_edit];
-                    if (all_of(student_names[index_to_edit].begin(), student_names[index_to_edit].end(), ::isalpha)) break;
-                    cout << "Invalid name. Please use alphabetic characters only." << endl;
-                }
-
-                while (true) {
-                    string new_id;
-                    cout << "Enter new 4-digit ID: ";
-                    cin >> new_id;if (new_id.length() == 4 && all_of(new_id.begin(), new_id.end(), ::isdigit)) {
-                        bool unique = true;
-                        for (int j = 0; j < num_students; j++) {
-                            if (student_ids[j] == new_id && j != index_to_edit) {
-                                unique = false;
+                        while (true) {
+                            cout << "Day " << (j + 1) << ": ";
+                            cin >> study_hours[i][j];
+                            if (study_hours[i][j] >= 0 && study_hours[i][j] <= 24) {
+                                total_study_hours[i] += study_hours[i][j];
                                 break;
+                            } else {
+                                cout << "Please enter a number between 0 and 24.\n";
                             }
                         }
-                        if (unique) {
-                            student_ids[index_to_edit] = new_id;
-                            break;
-                        } else {
-                            cout << "ID already exists. Please enter a unique 4-digit ID." << endl;
-                        }
-                    
-                }
-
-                // Update study hours
-                for (int j = 0; j < days; j++) {
-                    while (true) {
-                        cout << "Day " << (j + 1) << ": ";
-                        cin >> study_hours[index_to_edit][j];
-                        if (study_hours[index_to_edit][j] >= 0) {
-                            total_study_hours[index_to_edit] += study_hours[index_to_edit][j];
-                            daily_averages[j] += study_hours[index_to_edit][j];
-                            break;
-                        } else {
-                            cout << "Please enter a non-negative number." << endl;
-                        }
                     }
-                }
-                
-                cout << "Student with ID " << id_to_edit << " has been updated." << endl;
 
-            } }else {
-                cout << "No student found with ID " << id_to_edit << "." << endl;
-            }
-        } 
-        else if (choice == 4) {
-            // Search student
-            string id_to_search;
-            cout << "Enter the ID of the student to search: ";
-            cin >> id_to_search;
-
-            int index_to_search = -1;
-            for (int i = 0; i < num_students; i++) {
-                if (student_ids[i] == id_to_search) {
-                    index_to_search = i;
+                    found = true;
                     break;
                 }
             }
+            if (!found) {
+                cout << "Student not found.\n";
+            }
+        } else if (choice == 4) {
+            // Search for a student by name or ID
+            string search_query;
+            cout << "Enter student name or ID: ";
+            cin.ignore();
+            getline(cin, search_query);
 
-            if (index_to_search != -1) {
-               
-                cout << "\nStudent Found:\n";
-                cout << "Name: " << student_names[index_to_search] << "\n";
-                cout << "ID: " << student_ids[index_to_search] << "\n";
-                cout << "Total Study Hours: " << total_study_hours[index_to_search] << "\n";
-                for (int j = 0; j < days; j++) {
-                    cout << "Day " << (j + 1) << ": " << study_hours[index_to_search][j] << "\n";
-                }
-            } else {
-                cout << "No student found with ID " << id_to_search << "." << endl;
-            }
-        } 
-        else if (choice == 5) {
-            
-            cout << "\n---- Student Records ----\n";
+            bool found = false;
             for (int i = 0; i < num_students; i++) {
-                cout << "\nStudent Name: " << student_names[i]
-                     << "\nStudent ID: " << student_ids[i]
-                     << "\nTotal Study Hours: " << total_study_hours[i]
-                     << "\nDaily Study Hours: ";
-                
-                for (int j = 0; j < days; j++) {
-                    cout << study_hours[i][j] << " ";
+                if (student_names[i] == search_query || student_ids[i] == search_query) {
+                    cout << "Details for " << student_names[i] << " (" << student_ids[i] << "):\n";
+                    for (int j = 0; j < days; j++) {
+                        cout << "Day " << (j + 1) << ": " << study_hours[i][j] << " hours\n";
+                    }
+                    cout << "Total: " << total_study_hours[i] << " hours\n";
+                    found = true;
+                    break;
                 }
-                
-                cout << "\n";
             }
-        } 
-        else if (choice == 6) {
-            // Sort records by total study hours
+            if (!found) {
+                cout << "Student not found.\n";
+            }
+        } else if (choice == 5) {
+            // Print all student records
+            cout << left << setw(20) << "Name" << setw(10) << "ID";
+            for (int j = 1; j <= days; j++) {
+                cout << setw(10) << "Day " + to_string(j);
+            }
+            cout << setw(10) << "Total\n";
+
+            for (int i = 0; i < num_students; i++) {
+                cout << setw(20) << student_names[i] << setw(10) << student_ids[i];
+                for (int j = 0; j < days; j++) {
+                    cout << setw(10) << study_hours[i][j];
+                }
+                cout << setw(10) << total_study_hours[i] << "\n";
+            }
+        } else if (choice == 6) {
+            // Sort student records by ID
+            cout << "Sorting by ID...\n";
             for (int i = 0; i < num_students - 1; i++) {
                 for (int j = i + 1; j < num_students; j++) {
-                    if (total_study_hours[i] > total_study_hours[j]) {
+                    if (student_ids[i] > student_ids[j]) {
+                        // Swap all related data to keep records consistent
                         swap(student_names[i], student_names[j]);
                         swap(student_ids[i], student_ids[j]);
-                        swap(total_study_hours[i], total_study_hours[j]);for (int k = 0; k < days; k++) {
+                        swap(total_study_hours[i], total_study_hours[j]);
+                        for (int k = 0; k < days; k++) {
                             swap(study_hours[i][k], study_hours[j][k]);
                         }
                     }
                 }
             }
-            cout << "Records sorted by total study hours." << endl;
-        } 
-        else if (choice == 7) {
-            // Exit program
+            cout << "Students sorted by ID.\n";
+        } else if (choice == 7) {
+            // Exit the program
+            cout << "Exiting the program. Goodbye!\n";
             break;
-        } 
-        else {
-            cout << "Invalid choice. Please try again." << endl;
+        } else {
+            cout << "Invalid choice. Please try again.\n";
         }
     }
 
